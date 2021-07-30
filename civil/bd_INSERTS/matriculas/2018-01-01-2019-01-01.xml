@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registros>
+  <registro0>
+    <ato0>
+      <ato_tipo_id>1</ato_tipo_id>
+      <matricula>1</matricula>
+      <identificacao_ato>DD</identificacao_ato>
+      <data_registro>2018-12-18</data_registro>
+      <dados>
+        <numero_paginas>12</numero_paginas>
+        <tipo_imovel/>
+        <area_metros_quadrados>D</area_metros_quadrados>
+        <endereco>
+          <cidade>D</cidade>
+          <endereco>DD</endereco>
+          <loteamento>D</loteamento>
+          <lote>D</lote>
+        </endereco>
+        <descricao_matricula>D</descricao_matricula>
+      </dados>
+    </ato0>
+  </registro0>
+  <registro0>
+    <ato0>
+      <ato_tipo_id>1</ato_tipo_id>
+      <matricula>1</matricula>
+      <identificacao_ato>XXXXXXXXXXXXXXXXXX</identificacao_ato>
+      <data_registro>2018-12-30</data_registro>
+      <dados>
+        <numero_paginas>12</numero_paginas>
+        <tipo_imovel/>
+        <area_metros_quadrados>XXXXXXXX</area_metros_quadrados>
+        <endereco>
+          <cidade>XXXXXXXXX</cidade>
+          <endereco>XXXXXXX</endereco>
+          <loteamento>XXXXXX</loteamento>
+          <lote>XXXXXXXXX</lote>
+        </endereco>
+        <descricao_matricula>XXXXXXXXXXXX</descricao_matricula>
+      </dados>
+    </ato0>
+  </registro0>
+  <registro0>
+    <ato0>
+      <ato_tipo_id>1</ato_tipo_id>
+      <matricula>1</matricula>
+      <identificacao_ato>12345667890</identificacao_ato>
+      <data_registro>2019-01-03</data_registro>
+      <dados>
+        <numero_paginas>12</numero_paginas>
+        <tipo_imovel>U</tipo_imovel>
+        <area_metros_quadrados>123</area_metros_quadrados>
+        <endereco>
+          <cidade>são josé dos patos</cidade>
+          <endereco>avenida teste </endereco>
+          <loteamento>teste</loteamento>
+          <lote>1</lote>
+        </endereco>
+        <descricao_matricula>&lt;p&gt;era uma casa muito engra&ccedil;ada&lt;/p&gt;</descricao_matricula>
+      </dados>
+    </ato0>
+  </registro0>
+  <registro0>
+    <ato0>
+      <ato_tipo_id>1</ato_tipo_id>
+      <matricula>1</matricula>
+      <identificacao_ato>12345667890</identificacao_ato>
+      <data_registro>2019-01-03</data_registro>
+      <dados>
+        <numero_paginas>12</numero_paginas>
+        <tipo_imovel>U</tipo_imovel>
+        <area_metros_quadrados>123</area_metros_quadrados>
+        <endereco>
+          <cidade>são josé dos patos</cidade>
+          <endereco>avenida teste </endereco>
+          <loteamento>teste</loteamento>
+          <lote>1</lote>
+        </endereco>
+        <descricao_matricula>&lt;p&gt;era uma casa muito engra&ccedil;ada&lt;/p&gt;</descricao_matricula>
+      </dados>
+    </ato0>
+  </registro0>
+  <registro0>
+    <ato0>
+      <ato_tipo_id>1</ato_tipo_id>
+      <matricula>1</matricula>
+      <identificacao_ato>12345667890</identificacao_ato>
+      <data_registro>2019-01-03</data_registro>
+      <dados>
+        <numero_paginas>12</numero_paginas>
+        <tipo_imovel>U</tipo_imovel>
+        <area_metros_quadrados>123</area_metros_quadrados>
+        <endereco>
+          <cidade>são josé dos patos</cidade>
+          <endereco>avenida teste </endereco>
+          <loteamento>teste</loteamento>
+          <lote>1</lote>
+        </endereco>
+        <descricao_matricula>&lt;p&gt;era uma casa muito engra&ccedil;ada&lt;/p&gt;</descricao_matricula>
+      </dados>
+    </ato0>
+  </registro0>
+  <registro0>
+    <ato0>
+      <ato_tipo_id>1</ato_tipo_id>
+      <matricula>1</matricula>
+      <identificacao_ato>12345667890</identificacao_ato>
+      <data_registro>2019-01-03</data_registro>
+      <dados>
+        <numero_paginas>12</numero_paginas>
+        <tipo_imovel>U</tipo_imovel>
+        <area_metros_quadrados>123</area_metros_quadrados>
+        <endereco>
+          <cidade>são josé dos patos</cidade>
+          <endereco>avenida teste </endereco>
+          <loteamento>teste</loteamento>
+          <lote>1</lote>
+        </endereco>
+        <descricao_matricula>&lt;p&gt;era uma casa muito engra&ccedil;ada&lt;/p&gt;</descricao_matricula>
+      </dados>
+    </ato0>
+  </registro0>
+</registros>

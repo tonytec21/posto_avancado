@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Newset>
+  <AtoCep>
+    <TipoAtoCep>2</TipoAtoCep>
+    <NaturezaEscritura/>
+    <DataAto>2019-12-12</DataAto>
+    <Livro>00012</Livro>
+    <LivroComplemento/>
+    <Folha>1</Folha>
+    <FolhaComplemento>F</FolhaComplemento>
+    <Valor>88.8</Valor>
+    <Desconhecido/>
+    <ReferenteLivroComplemento/>
+    <ReferenteFolhaComplemento/>
+    <ReferenteUFOrigem/>
+    <ReferenteCidadeOrigem>1</ReferenteCidadeOrigem>
+    <ReferenteCartorio/>
+    <ParteNome>ALDA MARIA LEITE TEIXEIRA</ParteNome>
+    <ParteIdentidade>0000042508932</ParteIdentidade>
+    <ParteOrgaoEmissor>SSP</ParteOrgaoEmissor>
+    <ParteTipoDocumento>CPF</ParteTipoDocumento>
+    <ParteNumeroDocumento>550.508.083-91</ParteNumeroDocumento>
+    <ParteQualidade>OUTORGANTE</ParteQualidade>
+  </AtoCep>
+</Newset>

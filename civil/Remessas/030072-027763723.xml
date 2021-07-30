@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<certidao>
+  <numero_cnj>123456</numero_cnj>
+  <emissao>
+    <nome_crianca>TIMOTEO MARTINS ANDRADE</nome_crianca>
+    <cpf_registrado>SEM INFORMAÇÃO</cpf_registrado>
+    <matricula>03007201551999100053281004229074</matricula>
+    <data_registro>16/12/1999</data_registro>
+    <data_nascimento_extenso>Vinte e seis de Janeiro de  mil novecentos e noventa e nove</data_nascimento_extenso>
+    <data_nascimento>26/01/1999</data_nascimento>
+    <hora_nascimento>14:00</hora_nascimento>
+    <municipio_nascimento>BEQUIMÃO/MA</municipio_nascimento>
+    <municipio_registro>BEQUIMÃO/MA</municipio_registro>
+    <local_nascimento>POV. VITÓRIO</local_nascimento>
+    <naturalidade>BEQUIMÃO/MA</naturalidade>
+    <sexo>Masculino</sexo>
+    <filiacao>JOSÉ ROBERTO e MARIA BARBARA MARTINS</filiacao>
+    <avos>HONORIO FERREIRA, ROSILDA ANDRADE e JOSEFA DA CONCEIÇÃO</avos>
+    <flag_gemeo>Não</flag_gemeo>
+    <gemeos>
+      <qtd_irmaos>0</qtd_irmaos>
+      <irmao>
+        <nome_matricula/>
+      </irmao>
+      <irmao>
+        <nome_matricula/>
+      </irmao>
+    </gemeos>
+    <data_registro_extenso>Dezesseis de Dezembro de  mil novecentos e noventa e nove</data_registro_extenso>
+    <numero_dnv>SEM INFORMAÇÃO</numero_dnv>
+    <observacoes_averbacoes/>
+    <anotacoes_cadastro>
+      <registrado>
+        <cep_res/>
+        <grupo_sanguineo/>
+        <titulo_eleitor>
+          <numero/>
+          <zona_secao/>
+          <uf/>
+          <municipio/>
+        </titulo_eleitor>
+        <documentos>
+          <documento>
+            <tipo_doc/>
+            <numero/>
+            <data_emissao/>
+            <orgao_emissor/>
+            <uf_emissao/>
+            <data_validade/>
+          </documento>
+        </documentos>
+      </registrado>
+    </anotacoes_cadastro>
+  </emissao>
+  <rejeicao>
+    <motivo_rejeicao/>
+  </rejeicao>
+</certidao>

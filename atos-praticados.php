@@ -1,41 +1,10 @@
 <?php include('controller/db_functions.php');session_start();
-if (!empty($_SESSION['id'])) {
-$data_hoje = date('Y-m-d');
-$w = PESQUISA_ALL_ID('backup','1');
-foreach ($w as $w) {
-$data_backup = $w->data_backup;
-$proxima_data = $w->proxima_data;
-$padrao = $w->padrao;
-if ($data_hoje == $data_backup) {
-$data_exp = explode('-',$proxima_data);
-$nova_proxima_data = date('Y-m-d', strtotime($data_hoje. ' + '.$padrao.' days'));
-UPDATE_CAMPO_ID('backup','data_backup',$proxima_data,1);
-UPDATE_CAMPO_ID('backup','proxima_data',$nova_proxima_data,1);
-header('location:controller/teste-backup.php');
-}
 
-}
-}
 
 if(!isset($_SESSION['id'])) {header('location:login.php');};
 
 ?>
 
-<?php
-$diaSemana = array("Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado");
-$data = date('Y-m-d');
-$diaSemana_numero = date('w', time());
-#echo $diaSemana[$diaSemana_numero];
-if ($diaSemana[$diaSemana_numero] == 'Sexta') {
-#$_SESSION['alert'] = 'HOJE É O DIA PARA A EXPORTAÇÃO DO ARQUIVO DO FERJ, FIQUE ATENTO';
-}
-else{unset($_SESSION['alert']);}
-
-/*
-$_SESSION['erro'] = '<script type="text/javascript">swal("Atenção!", "O pagamento da sua mensalidade encontra-se atrasado, por favor regularize-se no prazo de 03 (três) dias para evitar bloqueio!", "warning");
-</script>';
-*/
-?>
 
 <!DOCTYPE html>
 <html>
@@ -86,45 +55,21 @@ max-width:1300px;
 }
 .samobile{
     width: 50%;
-    /* margin-bottom: 10px; */
 }
 .ico-menu{
     color:white; margin-top: 5px; margin-left: 40px; cursor:pointer;
 }
-
-	a:hover, a:focus{
+		a:hover, a:focus{
 		color:#2e2e2e;
-	}	
+	}
 </style>
 <script src="plugins/sweetalert/sweetalert.min.js"></script>
 <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 <!-- Jquery Core Js -->
 <script src="plugins/jquery/jquery.min.js"></script>
+<script src="js/pages/ui/tooltips-popovers.js"></script>
 </head>
-<?php $img = PESQUISA_ALL_ID('cadastroserventia',1);foreach ($img as $img) {
-$img_back = $img->imgAssinaturaTitular;
-$cns = $img->strCNS;
-} 
-if ($img_back == 'S4FF') {
-$_SESSION['taxaff'] = 'S';
-}
-else{
-  $_SESSION['taxaff'] = 'N';
-}
-
-#bloquear alguma serventia é só preencher o cns e dar pull
-if ($cns =='12345' ) {
-$_SESSION['msg'] = "<div class='alert alert-danger' role='alert' id='response'>
-    <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>
-    &times;</span></button>
-    Pagamento em atraso! entre em contato com o suporte!
-    </div>";
-header("location:login.php");
-}
-?>
-<body class="theme-red" >
-   
-    <nav class="navbar" style="background: #2e2e2e!important; height: 80px!important;">
+<nav class="navbar" style="background: #2e2e2e!important; height: 80px!important;">
         <div class="container-fluid">
                 <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
@@ -154,7 +99,7 @@ header("location:login.php");
         echo "
         <div class='col-md-14' style='margin-left:-115px'>
         <p class='font-bold col-white'>Olá ".$nome[0].",
-       Bem vindo <a style='color: white;' href='sair.php' class='btn bg-red  waves-effect waves-float'> <i  class='material-icons' margin-top='1px'>power_settings_new</i>Sair</a>
+       Bem vindo <a style='color: white' href='sair.php' class='btn bg-red  waves-effect waves-float'> <i  class='material-icons' margin-top='1px'>power_settings_new</i>Sair</a>
 
         </div>";
         echo "";
@@ -174,172 +119,131 @@ header("location:login.php");
 
 
     </nav>
+    <!-- <?php if (isset($_SESSION['logadoAdm']) && $_SESSION['logadoAdm'] =='S'): ?>
+    <nav class="navbar bg-grey" style="margin-top: 5.7%; text-align: center;">
+    <?php else: ?>
+      <nav class="navbar bg-grey" style="margin-top: 5.7%;text-align: center;">
+    <?php endif ?>     -->
+       <!-- <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Atos praticados" href="atos-praticados.php">assessment</a> 
 
-    <section id="ras" class="content">
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Funções Extras" href="funcoes-extras/index/index.php">assignment_turned_in</a>  -->
+
+<!-- 
+       <i class="material-icons ico-menu " style="font-size: 40px"  data-toggle="tooltip" data-placement="bottom" title="Tabela de Emolumentos" onclick="window.open('funcoes-extras/pesquisa-tabela.php')">monetization_on</i>
+-->
+       <!-- <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Indisponibilidade" href="pages/tables/indisponibilidade/api/pesquisa-indisponibilidade.php">line_weight</a> 
+
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Menu de Livros" href="pages/tables/configuracoes-livro.php">chrome_reader_mode</a> 
+
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Cadastro de Folhas de Segurança" href="pages/tables/cadastrar-folha-seguranca.php">description</a> 
+
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Lembretes" href="pages/tables/incluir-lembrete.php">alarm_on</a>  -->
+
+<!--       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Editor de Texto" href="texto-livre.php">assignment</a> -->
+
+       <!-- <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Configurações de Etiqueta" href="pages/tables/configuracao-etiqueta.php">straighten</a>     
+       
+        <?php if (isset($_SESSION['logadoAdm']) && $_SESSION['logadoAdm'] =='S'): ?>
+        <?php 
+
+        $array_meses = array(' ','JAN','FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ');
+        $indice = intval(date('m'));
+        $data_active = $array_meses[$indice];
+        $ini = date('Y-m').'-01';
+        $fin = date('Y-m').'-31';
+        ?>       
+
+
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Livro Caixa" href="livro_caixa/livro-caixa.php?mes=<?=$data_active?>&ini=<?=$ini?>&fin=<?=$fin?>&ano_sel=<?=date('Y')?>">account_balance</a> 
+
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Funcionários" href="pages/tables/cadastro-funcionario.php">person</a> 
+
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Informações da Serventia" href="pages/tables/cadastro-serventia.php?id=1">store</a> 
+
+       <a class="material-icons ico-menu " style="font-size: 40px" data-toggle="tooltip" data-placement="bottom" title="Painel do Administrador" href="graficos.php">work</a> 
+        <?php endif ?> -->
+
+    <!-- </nav> -->
+    <br><br>
+    <section id="ras" class="content" style="margin-left: 30px!important" >
+        <div class="container-fluid">
+         
+           
+              <div class="card">
+                <br>
+           
+                    
+              <div class="row bg-grey" style="padding-left: 5%; max-width: 100%; padding: 10px;margin-top: -2%; ">
+                     <h5 style="margin-left: 20px;">MOSTRANDO ATOS DE:</h5>
+                            <div class="col-md-4" style="margin-left: 8%;">
+                           <label class="col-md-4">Data inicial:</label>
+                           <div class="col-md-8">
+                           <input type="date" id="data_inicial" class="form-control" name="data_inicial"> 
+                           </div>
+                           </div>
+
+                           <div class="col-md-4">
+                           <label class="col-md-4">Data Final:</label>
+                           <div class="col-md-8">
+                           <input type="date" id="data_final"  class="form-control" name="data_final"> 
+                           
+                           </div>
+                           </div>
+                   
         
-        <div class="row">
-            <br>
-                <div class=" col-sm-6">
-                <div class="col-md-12" style="background: ; min-width: 100%; margin-left: 4%; padding-left: 1%; min-height: 150%;">
-                <br/><br/>
-                <h5>MÓDULOS DO SISTEMA:</h5>
-                
-                    </div>
-              <?php $r = PESQUISA_ALL('cadastroserventia'); foreach ($r as $r ):?>
+                           <a class="btn waves-efect bg-green" style="padding: 6px 10px 6px 10px;" onclick="carregaatos()"><i class="material-icons">search</i> Buscar</a> 
+            
+              </div>
+              
+            <div class="row">
+                <?php 
 
-              <?php if ($r->checkboxCivil =='S') {
-                echo "
-                <div onclick='window.location.href=\"civil/index.php\"' style='cursor:pointer' class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
-                    <div style='cursor:pointer;background:linear-gradient(45deg, #3394d4, #daf0ff);' class='info-box bg-cyan'>
-                      <div class='icon'>
-                      <i class='material-icons'>person_pin</i>
-                      <div class='text-center' style='margin-top:0px;'> REGISTRO CIVIL </div>
-                      </div>
+                $hoje = date('Y-m-d');
+                $dias = date('Y-m-d', strtotime($hoje.'-15days'));
+                 ?>
 
 
-                      </div>
-                        
+                    
+
+
+                        <div id="fun" class="modal-body">
+                    
+                        </div>
+
+              </div>
+
                 </div>
 
-";
-              }else {
-                echo "";
-              }
 
-               ?>
-             <?php endforeach ?>
-
-			 
-<?php if (isset($r->mensagem) && !empty($r->mensagem) && empty($r->link)):?>
-<script type="text/javascript">
-$(document).ready(function(){		 
-	$.notify({
-			// options
-			title: '<strong>MENSAGEM!</strong>',
-			message: "<br><?=$r->mensagem?>",
-		  icon: 'glyphicon glyphicon-envelope',
-		},{
-			// settings
-			element: 'body',
-			position: null,
-			type: "info",
-			allow_dismiss: true,
-			placement: {
-				from: "bottom",
-				align: "right"
-			},
-			delay: 0,
-			timer: 1000,
-			url_target: '_blank',
-	});
-});
-</script>
-<?php endif;?>
-<?php if (isset($r->mensagem) && !empty($r->mensagem) && !empty($r->link) && isset($r->link)):?>
-<script type="text/javascript">
-$(document).ready(function(){		 
-	$.notify({
-			// options
-			title: '<strong>MENSAGEM!</strong>',
-			message: "<br><?=$r->mensagem?>",
-		  icon: 'glyphicon glyphicon-envelope',
-		  url: "<?=$r->link?>",
-		},{
-			// settings
-			element: 'body',
-			position: null,
-			type: "danger",
-			allow_dismiss: true,
-			placement: {
-				from: "bottom",
-				align: "right"
-			},
-			delay: 0,
-			timer: 1000,
-			url_target: '_blank',
-	});
-});
-</script>
-<?php endif;?>
-          <div onclick='window.location.href="pessoas/index.php"' style='cursor:pointer'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
-          <div style='cursor:pointer;background:linear-gradient(45deg, #a80f1e, #f37783);' class='info-box bg-brown'>
-          <div class='icon'>
-          <i class='material-icons'>person</i>
-          <div class='text-center' style='margin-top:0px;'>CADASTRO DE PESSOAS</div>
-          </div>
-
-          </div>
-          
-          </div>
-
-
-          <div onclick='window.location.href="atos-praticados.php"' style='cursor:pointer'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
-          <div style='cursor:pointer;background:linear-gradient(45deg, rgb(20 20 20), #cbcbcb);' class='info-box bg-brown'>
-          <div class='icon'>
-          <i class='material-icons'>assessment</i>
-          <div class='text-center' style='margin-top:0px;'>ATOS PRATICADOS</div>
-          </div>
-
-          </div>
-          
-          </div>
-
-
-          <!--div onclick='window.location.href="pages/tables/cartorio-selar.php"' style='cursor:pointer'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
-          <div style='cursor:pointer; background: linear-gradient(45deg, #fb6340, #fdae9c)!important;' class='info-box bg-brown'>
-          <div class='icon'>
-          <i class='material-icons'>note_add</i>
-          </div>
-
-
-
-          </div>
-          <div class='text-center' style='margin-top:-20px;'>SELO AVULSO</div>
-          </div-->
-
-
-
-
- <!--div type="button"  data-toggle="modal" data-target="#defaultModal" class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-black">
-                        <div class="icon">
-                            <i class="material-icons">swap_vertical_circle</i>
-                        </div>
-                        <div class="content">
-                            <div class="text">GERAL (CONFIGURAÇÕES DO CARTÓRIO)</div>
-
-                        </div>
-                    </div>
-                </div-->
-
-
-
-
-
-    
-
-</div>
-
-    <div id="outrasec" class="col-md-6">
-      <?php include('links.php'); ?>
-    </div>
-
-
-
-
-
-            </div>
-
-
+              
+            
         </div>
-
-        
     </section>
- <div class="col-sm-12 " style=" padding-top: 3%;padding-bottom: 2%;  ">
-        <p class="text-center">SISTEMA BOOKC V 2.0 <?=date('Y')?> &copy TODOS OS DIREITOS RESERVADOS</p>
 
 
- </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Jquery Core Js -->
     <script src="plugins/jquery/jquery.min.js"></script>
                       <script>
@@ -347,6 +251,17 @@ $(document).ready(function(){
   $("#imgBookc").click(function(){
     $("#leftsidebar").toggle();
   });
+ 
+
+var datainicial = '<?=$hoje?>';
+var datafinal = '<?=$dias?>';
+  $('#data_inicial').val(datafinal);
+   $('#data_final').val(datainicial);
+
+  carregaatos();
+
+
+
 });
 </script>
 
@@ -354,7 +269,7 @@ $(document).ready(function(){
     <!-- Bootstrap Core Js -->
     <script src="plugins/bootstrap/js/bootstrap.js"></script>
 
-        <script src="js/pages/ui/tooltips-popovers.js"></script>
+
 
     <!-- Slimscroll Plugin Js -->
     <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
@@ -684,7 +599,12 @@ $_SESSION['grant_type_token'] = $urls->grant_type_token;
     <script src="plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
-
+<script type="text/javascript">
+  $('#atividadeFuncionarios').click(function(){
+    $('#funcionarios').modal();
+    showCustomer();
+  });
+</script>
 
 
 <div class="modal fade" id="funcionarios" tabindex="-1" role="dialog">
@@ -740,6 +660,14 @@ function showCustomer() {
                              </div>
                              <br><br>
 
+                             <div class="col-sm-12">
+                               <label class="control-label col-md-4">VALOR RECEBIDO DO CLIENTE:</label>
+                               <div class="col-md-8">
+                                 <input type="text" name="valorrecebido" id="valorrecebido" class="form-control" onkeyup="dinheiro(this)">
+                               </div>
+                             </div>
+                             <br><br>
+
 
                              <div class="col-sm-12">
                                <label class="control-label col-md-4">FUNCIONÁRIO:</label>
@@ -749,13 +677,17 @@ function showCustomer() {
                                    <?php $w = PESQUISA_ALL('funcionario'); foreach($w as $w): ?>
                                    <option value="<?=$w->strNomeCompleto?>"><?=$w->strNomeCompleto?></option>
                                  <?php endforeach ?>
+                                 <?php if (isset($_SESSION['logadoAdm']) && $_SESSION['logadoAdm'] == 'S'): ?>
+                                   <option value="<?=$_SESSION['nome']?>"><?=$_SESSION['nome']?></option>
+                                 <?php endif ?>
                                  </select>
                                </div>
                              </div>
                              <input type="hidden" name="iddosrecibos" id="iddosrecibos" >
+                             <div class="col-md-12" id="configdiv"></div>
                              <div class="col-sm-9"></div>
 
-                             <button style="margin-top: 20px;" type="submit" class="btn waves-effect bg-black"><i class="material-icons">print</i>IMPRIMIR</button>
+                             <button style="margin-top: 20px;" type="submit" class="btn waves-effect bg-black"><i class="material-icons">print</i>GERAR</button>
                              </div>
                              </form>
                             </div>
@@ -831,13 +763,62 @@ function showCustomer() {
 
 
 <script src='js/bootstrap-notify.min.js'></script>
-<script type="text/javascript">
-  $('#atividadeFuncionarios').click(function(){
-    window.open('atos-praticados.php');
-    //$('#funcionarios').modal();
-    //showCustomer();
-  });
-</script>
+    <script>
+                        function carregaatos() {
+                        var xhttp;
+                        var datainicial = $('#data_inicial').val();
+                        var datafinal = $('#data_final').val();
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                        $('#fun').html (this.responseText);
+                        return;
+                        }
+                        else{
+                        $('#fun').html ("<h4 class='text-center'>Carregando... <br> <img src='images/loading_modal.gif'> </h4>");
+                        return;
+                        }
 
+                        };
+                        xhttp.open("POST", "busca-funcionarios-graficos-index.php?datainicial="+datainicial+"&datafinal="+datafinal, true);
+                        xhttp.send();
+                        }
+                        //setInterval("carregaatos()", 30000);
+
+
+
+
+                        function config_atos_recibo(idatos) {
+                        var xhttp;
+                        var datainicial = $('#data_inicial').val();
+                        var datafinal = $('#data_final').val();
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                        $('#configdiv').html (this.responseText);
+                        return;
+                        }
+                        else{
+                        $('#configdiv').html ("<h4 class='text-center'>Carregando... <br> <img src='images/loading_modal.gif'> </h4>");
+                        return;
+                        }
+
+                        };
+                        xhttp.open("POST", "busca-atos-config.php?idatos="+idatos, true);
+                        xhttp.send();
+                        }
+                        //setInterval("carregaatos()", 30000);
+                        </script>
+                        
 
 </html>
+<script type="text/javascript">
+  function dinheiro(i) {
+var v = i.value.replace(/\D/g,'');
+v = (v/100).toFixed(2) + '';
+v = v.replace(".", ".");
+v = v.replace(/(\d)(\d{3})(\d{3}),/g, "$1.$2.$3,");
+v = v.replace(/(\d)(\d{3}),/g, "$1.$2,");
+i.value = v;
+}
+</script>

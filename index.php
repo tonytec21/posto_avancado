@@ -319,7 +319,7 @@ $(document).ready(function(){
 
         
     </section>
- <div class="col-sm-12 " style=" padding-top: 3%;padding-bottom: 2%;  ">
+ <div class="col-sm-12 " style=" padding-top: 10%;padding-bottom: 2%;  ">
         <p class="text-center">SISTEMA BOOKC V 2.0 <?=date('Y')?> &copy TODOS OS DIREITOS RESERVADOS</p>
 
 

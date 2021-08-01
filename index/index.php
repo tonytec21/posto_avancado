@@ -157,8 +157,8 @@ max-width:1300px;
 </div>
 
 <div class="row" style="margin-left: 0px;">
-
-                <div class="col-sm-6" style="max-width: 17%!important;">
+                <!-- CRC NACIONAL -->
+                <div class="col-sm-6" style="max-width: 19.8%!important;">
                     <a href='https://sistema.registrocivil.org.br/' target='_blank' title='CRC NACIONAL'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
@@ -171,7 +171,22 @@ max-width:1300px;
                     </a>
                 </div>
 
-                <div class="col-sm-6" style="max-width: 17%!important;">
+                <!-- CFM -->
+                <div class="col-sm-6" style="max-width: 19.8%!important;">
+                <a href="https://portal.cfm.org.br/busca-medicos/" target="_blank" title="Conselho Federal de Medicina">
+                                <div style="cursor:pointer; width: 150px;height: 60px;background:#fff !important" class="info-box bg-brown">
+                                                                  <div class="icon">
+                                    <img style="width: 50%; margin-top: 8%;" src="../images/cfm.png"/>
+                                    
+                                </div>
+
+                         </div>
+          
+                    </a>
+                </div>
+
+                <!-- CONSULTAR SELO -->
+                <div class="col-sm-6" style="max-width: 19.8%!important;">
                     <a href="https://selo.tjma.jus.br/" target="_blank" title='CONSULTAR SELO'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
@@ -184,8 +199,8 @@ max-width:1300px;
                      </a>
                 </div>
 
-                
-                <div class="col-sm-6" style="max-width: 17%!important;">
+                <!-- TJ MA -->
+                <div class="col-sm-6" style="max-width: 19.8%!important;">
                     <a href="http://www.tjma.jus.br/" target="_blank" title='TJ/MA'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
@@ -198,8 +213,8 @@ max-width:1300px;
                     </a>
                 </div>
 
-
-                <div class="col-sm-6" style="max-width: 17%!important;">
+                <!-- WHATSAPP WEB -->
+                <div class="col-sm-6" style="max-width: 19.8%!important;">
                     <a href="https://web.whatsapp.com/" target="_blank" title='WHATSAPP WEB'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>

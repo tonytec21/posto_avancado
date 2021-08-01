@@ -71,7 +71,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
     &times;</span></button>
     Área restrita
     </div>";
-    header("location:http://".$_SERVER['HTTP_HOST']."/sistema/index.php");
+    header("location:http://".$_SERVER['HTTP_HOST']."/posto_avancado/index.php");
 }
 
  ?>
@@ -91,7 +91,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
             <h4 class="text-center"> NASCIMENTO - O QUE DESEJA FAZER?</h4><br>
             <div class="row">
 
-            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-nascimento.php'?>'">
+            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php'?>'">
             <i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">library_books</i><i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">fiber_new</i><br>
             INSERIR NOVO REGISTRO 
             </a>
@@ -120,7 +120,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
             var termo = $('#TERMOCONSULTA').val();
             $.post('nascimento-tempo-real.php', {'LIVRONASCIMENTO':livro, 'FOLHANASCIMENTO':folha, 'TERMONASCIMENTO':termo}, function(data) {
             if (data == 0) {
-            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-nascimento.php?acervo=ok'?>';
+            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php?acervo=ok'?>';
             }
             else{
             $("#resultadoconsulta").html(data);
@@ -146,7 +146,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
             <h4 class="text-center"> CASAMENTO - O QUE DESEJA FAZER?</h4><br>
             <div class="row">
 
-            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-casamento.php'?>'">
+            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-casamento.php'?>'">
             <i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">library_books</i><i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">fiber_new</i><br>
             INSERIR NOVO REGISTRO 
             </a>
@@ -182,7 +182,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
             var tipolivro = $('#TIPOLIVROcas').val();
             $.post('casamento-tempo-real.php', {'LIVROCASAMENTO':livro, 'FOLHACASAMENTO':folha, 'TERMOCASAMENTO':termo, 'TIPOLIVRO':tipolivro}, function(datacas) {
             if (datacas == 0) {
-            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-casamento.php?acervo=ok'?>';
+            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-casamento.php?acervo=ok'?>';
             }
             else{
             $("#resultadoconsultacas").html(datacas);
@@ -208,7 +208,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
             <h4 class="text-center"> ÓBITO - O QUE DESEJA FAZER?</h4><br>
             <div class="row">
 
-            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-obito.php'?>'">
+            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-obito.php'?>'">
             <i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">library_books</i><i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">fiber_new</i><br>
             INSERIR NOVO REGISTRO 
             </a>
@@ -244,7 +244,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
             var tipolivro = $('#TIPOLIVROobt').val();
             $.post('obito-tempo-real.php', {'LIVROOBITO':livro, 'FOLHAOBITO':folha, 'TERMOOBITO':termo, 'TIPOLIVRO':tipolivro}, function(dataobt) {
             if (dataobt == 0) {   
-            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-obito.php?acervo=ok'?>';
+            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-obito.php?acervo=ok'?>';
             }
             else{
             $("#resultadoconsultaobt").html(dataobt);   

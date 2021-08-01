@@ -9,7 +9,7 @@
                 <div class="container-fluid">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header col-md-2" style="margin-left: 12%;">
-                    <a style="padding-bottom: 60px;margin-top: -10px; " class="navbar-brand" href="<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/index.php'?>" ><img src="../../assets/img/brand/logo_1.png" style="height:50px!important; z-index: 100!important;" ></a>
+                    <a style="padding-bottom: 60px;margin-top: -10px; " class="navbar-brand" href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/index.php'?>" ><img src="../../assets/img/brand/logo_1.png" style="height:50px!important; z-index: 100!important;" ></a>
                   </div>
 
                    
@@ -21,7 +21,7 @@
                         
 
                           <?php if ($verifica_modulos['checkboxCivil'] =='S'): ?>
-                          <li style="width:400px!important; " onclick='window.open("<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/index.php'?>")'
+                          <li style="width:400px!important; " onclick='window.open("<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>")'
                             onmouseenter ="$(this).css('cursor', 'pointer');$(this).css('background', 'red');" 
                             >
                                         <div class="icon icon-shape bg-gradient-info rounded-circle text-white col-md-3" >
@@ -34,7 +34,7 @@
                           </li>
                           <?php endif ?>
                           
-                          <li style="width:400px!important; " onclick='window.open("<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/pessoas/index.php'?>")'
+                          <li style="width:400px!important; " onclick='window.open("<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index.php'?>")'
                             onmouseenter ="$(this).css('cursor', 'pointer');$(this).css('background', 'red');" 
                             >
                                         <div class="icon icon-shape bg-gradient-red rounded-circle text-white col-md-3" >
@@ -74,7 +74,7 @@
 
                   <div class="col-sm-3" style="padding-top: 1.2%;padding-left: 18%" >
                     
-                    <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/pessoas/index/cadastro_pessoas_new'?>" target="_blank" class="btn waves-effect bg-white" style="color:#9a59bd; font-weight: bold; padding: 15px"
+                    <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index/cadastro_pessoas_new'?>" target="_blank" class="btn waves-effect bg-white" style="color:#9a59bd; font-weight: bold; padding: 15px"
 
 
                       ><i class="material-icons">person</i> CADASTRAR PESSOA</a>
@@ -83,7 +83,7 @@
 
                    <div class="col-sm-3" style="padding-top: 1.2%;padding-left: 8%" >
                     
-                    <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/pessoas/index/pesquisaPessoas.php'?>" target="_blank" class="btn waves-effect bg-white" style="color:#9a59bd; font-weight: bold; padding: 15px"
+                    <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index/pesquisaPessoas.php'?>" target="_blank" class="btn waves-effect bg-white" style="color:#9a59bd; font-weight: bold; padding: 15px"
 
 
                       ><i class="material-icons">search</i> PESQUISAR PESSOA</a>
@@ -107,7 +107,7 @@
             <h4 class="text-center"> NASCIMENTO - O QUE DESEJA FAZER?</h4><br>
             <div class="row">
 
-            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-nascimento.php'?>'">
+            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php'?>'">
             <i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">library_books</i><i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">fiber_new</i><br>
             INSERIR NOVO REGISTRO 
             </a>
@@ -136,7 +136,7 @@
             var termo = $('#TERMOCONSULTA').val();
             $.post('../nascimento-tempo-real.php', {'LIVRONASCIMENTO':livro, 'FOLHANASCIMENTO':folha, 'TERMONASCIMENTO':termo}, function(data) {
             if (data == 0) {
-            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-nascimento.php?acervo=ok'?>';
+            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php?acervo=ok'?>';
             }
             else{
             $("#resultadoconsulta").html(data);
@@ -162,7 +162,7 @@
             <h4 class="text-center"> CASAMENTO - O QUE DESEJA FAZER?</h4><br>
             <div class="row">
 
-            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-casamento.php'?>'">
+            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-casamento.php'?>'">
             <i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">library_books</i><i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">fiber_new</i><br>
             INSERIR NOVO REGISTRO 
             </a>
@@ -198,7 +198,7 @@
             var tipolivro = $('#TIPOLIVROcas').val();
             $.post('../casamento-tempo-real.php', {'LIVROCASAMENTO':livro, 'FOLHACASAMENTO':folha, 'TERMOCASAMENTO':termo, 'TIPOLIVRO':tipolivro}, function(datacas) {
             if (datacas == 0) {
-            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-casamento.php?acervo=ok'?>';
+            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-casamento.php?acervo=ok'?>';
             }
             else{
             $("#resultadoconsultacas").html(datacas);
@@ -224,7 +224,7 @@
             <h4 class="text-center"> ÓBITO - O QUE DESEJA FAZER?</h4><br>
             <div class="row">
 
-            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-obito.php'?>'">
+            <div class="col-sm-12"><a style="border-radius: 10px; color: rgba(27, 53, 125,.8);font-size: 14px; font-weight: bold; padding: 1%;" class="btn bg-white col-sm-12" onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-obito.php'?>'">
             <i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">library_books</i><i class="material-icons text-center" style="font-size: 50px!important; color:rgba(27, 53, 125,.8)!important; margin-left: 0%;">fiber_new</i><br>
             INSERIR NOVO REGISTRO 
             </a>
@@ -260,7 +260,7 @@
             var tipolivro = $('#TIPOLIVROobt').val();
             $.post('../obito-tempo-real.php', {'LIVROOBITO':livro, 'FOLHAOBITO':folha, 'TERMOOBITO':termo, 'TIPOLIVRO':tipolivro}, function(dataobt) {
             if (dataobt == 0) {   
-            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/sistema/civil/bd_INSERTS/insert-obito.php?acervo=ok'?>';
+            window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-obito.php?acervo=ok'?>';
             }
             else{
             $("#resultadoconsultaobt").html(dataobt);   

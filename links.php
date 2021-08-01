@@ -1,9 +1,9 @@
-<div class="row clearfix" style="background: ; min-width: 100%; margin-left: -4%; padding-left: 1%; min-height: 150%;">
+<div class="row clearfix" style="background: ; min-width: 100%; margin-left: -4%; margin-top: 10px;padding-left: 1%; min-height: 150%;">
 <br/><br/>
 <h5>LINKS ÚTEIS:</h5>
 <legend></legend>
 </div>
-<div class="row clearfix" style="margin-left: -4%!important;">
+<div class="row clearfix" style="margin-left: -5%!important;margin-top: -22px;">
 <!-- CRC NACIONAL -->
 <?php $r = PESQUISA_ALL('cadastroserventia'); foreach ($r as $r ):?>
                     <?php if ($r->checkboxCivil =='S') {

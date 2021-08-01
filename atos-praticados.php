@@ -73,7 +73,7 @@ max-width:1300px;
         <div class="container-fluid">
                 <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                <a href="javascript:void(0);" class="bars"></a>
+                <!-- <a href="javascript:void(0);" class="bars"></a> -->
                 <a class="navbar-brand" href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/index.php'?>"><img src="images/logo_1.png" id="imgBookc"  style="max-width: 14%!important;margin-top: -13px;margin-left: 30%"></a>
 
                       </div>

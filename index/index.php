@@ -95,7 +95,7 @@ max-width:1300px;
 
                     <?php if ($r->checkboxCivil =='S') {
                     echo "
-                    <div onclick='window.location.href=\"../civil/index.php\"' style='cursor:pointer' class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
+                    <div onclick='window.location.href=\"../civil/index.php\"' style='cursor:pointer;margin-left: 0px;' class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
                         <div style='cursor:pointer;background:linear-gradient(45deg, #3394d4, #daf0ff);' class='info-box bg-cyan'>
                             <div class='icon'>
                             <i class='material-icons'>person_pin</i>
@@ -117,7 +117,7 @@ max-width:1300px;
                 </div>
 
                 <div class="col-sm-6">
-                     <div onclick='window.location.href="../pessoas/index.php"' style='cursor:pointer'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
+                     <div onclick='window.location.href="../pessoas/index.php"' style='cursor:pointer;margin-left: 0px;'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
                         <div style='cursor:pointer;background:linear-gradient(45deg, #a80f1e, #f37783);' class='info-box bg-brown'>
                                 <div class='icon'>
                                     <i class='material-icons'>person</i>
@@ -130,7 +130,7 @@ max-width:1300px;
                 </div>
 
                  <div class="col-sm-6">
-                    <div onclick='window.location.href="../atos-praticados.php"' style='cursor:pointer'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
+                    <div onclick='window.location.href="../atos-praticados.php"' style='cursor:pointer;margin-left: 0px;'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
                         <div style='cursor:pointer;background:linear-gradient(45deg, rgb(20 20 20), #cbcbcb);' class='info-box bg-brown'>
                             <div class='icon'>
                                 <i class='material-icons'>assessment</i>

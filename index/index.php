@@ -2,6 +2,7 @@
 #error_reporting(0);
 #ini_set('display_errors', 0);
 session_start();
+if(!isset($_SESSION['id'])) {header('location:../login.php');};
 
 /*if (empty($_SESSION['id']) && empty($_SESSION['nome'])) {
 $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>

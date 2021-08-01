@@ -396,3 +396,5 @@ function limpa_pasta($pasta){
 
  ?>
  <?php require_once('funcoes.php') ?>
+
+ 

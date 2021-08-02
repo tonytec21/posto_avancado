@@ -78,8 +78,8 @@ unset($_SESSION['erro']);
         <div class="col-sm-6 card bg-blue" style="padding-bottom: 10%;padding-top: 10%" >
             
             <img src="images/logo_1.png" style="width: 80%; margin-left: 10%">
-            <h3 class="text-center">SEU SISTEMA DE CARTÓRIO</h3>
-            <h6 class="text-center"><a class="text-center" href="https://sistemabookcartorios.com">www.sistemabookcartorios.com</a></h6>
+            <!-- <h3 class="text-center">SEU SISTEMA DE CARTÓRIO</h3> -->
+            <h3 class="text-center"><a class="text-center" style="color:#fff" href="https://sistemabookcartorios.com" target="_blank">www.sistemabookcartorios.com</a></h3>
 
         </div>
         <div class="col-sm-3"></div>

@@ -163,7 +163,7 @@ max-width:1300px;
                     <a href='https://sistema.registrocivil.org.br/' target='_blank' title='CRC NACIONAL'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/CRC_nacional.png'/>
+                                    <img style="width: 50%; margin-top: 8%;" src='../images/CRC_nacional.jpg'/>
                                     
                                 </div>
 
@@ -177,7 +177,7 @@ max-width:1300px;
                 <a href="https://portal.cfm.org.br/busca-medicos/" target="_blank" title="Conselho Federal de Medicina">
                                 <div style="cursor:pointer; width: 150px;height: 60px;background:#fff !important" class="info-box bg-brown">
                                                                   <div class="icon">
-                                    <img style="width: 50%; margin-top: 8%;" src="../images/cfm.png"/>
+                                    <img style="width: 50%; margin-top: 8%;" src="../images/cfm.jpg"/>
                                     
                                 </div>
 
@@ -191,7 +191,7 @@ max-width:1300px;
                     <a href="https://selo.tjma.jus.br/" target="_blank" title='CONSULTAR SELO'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/Consultar Selo.png'/>
+                                    <img style="width: 50%; margin-top: 8%;" src='../images/Consultar Selo.jpg'/>
                                     
                                 </div>
 
@@ -205,7 +205,7 @@ max-width:1300px;
                     <a href="http://www.tjma.jus.br/" target="_blank" title='TJ/MA'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/TJMA.png'/>
+                                    <img style="width: 50%; margin-top: 8%;" src='../images/TJMA.jpg'/>
                                     
                                 </div>
 
@@ -219,7 +219,7 @@ max-width:1300px;
                     <a href="https://web.whatsapp.com/" target="_blank" title='WHATSAPP WEB'>
                         <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/whatsapp.png'/>
+                                    <img style="width: 50%; margin-top: 8%;" src='../images/whatsapp.jpg'/>
                                     
                                 </div>
 

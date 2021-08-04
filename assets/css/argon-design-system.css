@@ -774,7 +774,7 @@ pre code {
 
 .col-6 {
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: 32%;
 }
 
 .col-7 {
@@ -951,7 +951,7 @@ pre code {
 
   .col-sm-6 {
     flex: 0 0 50%;
-    max-width: 32%!important;
+    max-width: 32%;
   }
 
   .col-sm-7 {
@@ -1133,7 +1133,7 @@ pre code {
 
   .col-md-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 32%;
   }
 
   .col-md-7 {
@@ -1315,7 +1315,7 @@ pre code {
 
   .col-lg-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 32%;
   }
 
   .col-lg-7 {
@@ -1497,7 +1497,7 @@ pre code {
 
   .col-xl-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 32%;
   }
 
   .col-xl-7 {
@@ -3875,7 +3875,7 @@ input[type="button"].btn-block {
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #8c001a;
+  background-color: #2e2e2e;
 }
 
 .dropdown-item.disabled,
@@ -7325,6 +7325,9 @@ button.bg-primary:focus {
 
 .bg-secondary {
   background-color: #f4f5f7 !important;
+  background-image: url("../../index/images/fundo.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 a.bg-secondary:hover,

@@ -23,6 +23,7 @@ $id = $_GET['id'];
 else{
 $id=0;
 }
+
 #var_dump($pdo);
 $dados_lavratura = SEARCH_ID('notas_lavratura',$id,'no');
 $r = PESQUISA_ALL_ID('notas_lavratura',$id);
@@ -61,9 +62,9 @@ max-width:1300px;
 .info-box:hover{
     opacity: 1;
     box-shadow: 0px 1px black;
-    transition: all 0.2s cubic-bezier(1, 0.01, 1, 1.36);
+    transition: all 0.2s cubic-bezier(1, 0.03, 1, 1.36);
     transform: scale(1.1);
-    border-radius: 40px;
+    border-radius: 6px;
 }
 </style>
 
@@ -80,27 +81,26 @@ max-width:1300px;
         <div class="py-2 bg-secondary">
 
 
-            <div class="row">
+            <div class="row" style="margin-left: 0px">
                 <legend>
                     <i class="fa fa-bookmark-o" aria-hidden="true"></i>
                     MÓDULOS DO SISTEMA
                 </legend>
             </div>
 
-            <div class="row">
+            
 
 
-                <div class=" col-sm-6">
+            <div class="row" style="margin-left: 15px;">
 
-                <?php $r = PESQUISA_ALL('cadastroserventia'); foreach ($r as $r ):?>
-
-                    <?php if ($r->checkboxCivil =='S') {
+                    <?php $r = PESQUISA_ALL('cadastroserventia'); foreach ($r as $r ):?>
+                        <?php if ($r->checkboxCivil =='S') {
                     echo "
-                    <div onclick='window.location.href=\"../civil/index.php\"' style='cursor:pointer;margin-left: 0px;' class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
+                    <div onclick='window.location.href=\"../civil/index.php\"' style='cursor:pointer; margin-left: 0px;' class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
                         <div style='cursor:pointer;background:linear-gradient(45deg, #3394d4, #daf0ff);' class='info-box bg-cyan'>
                             <div class='icon'>
                             <i class='material-icons'>person_pin</i>
-                            <div class='text-center' style='margin-top:0px; font-size: 13px; color:#fff;'> REGISTRO CIVIL </div>
+                            <div class='text-center' style='margin-top:0px; font-size: 13px; color: #fff;'> REGISTRO CIVIL </div>
                             </div>
 
 
@@ -112,13 +112,11 @@ max-width:1300px;
                     }else {
                     echo "";
                     }
-
                     ?>
                     <?php endforeach ?>
-                </div>
+                
 
-                <div class="col-sm-6">
-                     <div onclick='window.location.href="../pessoas/index.php"' style='cursor:pointer;margin-left: 0px;'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
+                     <div onclick='window.location.href="../pessoas/index.php"' style='cursor:pointer; margin-left: 0px;'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
                         <div style='cursor:pointer;background:linear-gradient(45deg, #a80f1e, #f37783);' class='info-box bg-brown'>
                                 <div class='icon'>
                                     <i class='material-icons'>person</i>
@@ -130,23 +128,24 @@ max-width:1300px;
                      </div>
                 </div>
 
-                 <div class="col-sm-6">
-                    <div onclick='window.location.href="../atos-praticados.php"' style='cursor:pointer;margin-left: 0px;'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
+                <!-- <div class="col-sm-6">
+                    <div onclick='window.location.href="../atos-praticados.php"' style='cursor:pointer'  class='col-lg-6 col-md-6 col-sm-6 col-xs-12 samobile'>
                         <div style='cursor:pointer;background:linear-gradient(45deg, rgb(20 20 20), #cbcbcb);' class='info-box bg-brown'>
                             <div class='icon'>
                                 <i class='material-icons'>assessment</i>
-                            <div class='text-center' style='margin-top:0px; font-size: 13px; color: #fff;'>ATOS PRATICADOS</div>
-                        </div>
+                                <div class='text-center' style='margin-top:0px; font-size: 13px; color: #fff;'>ATOS PRATICADOS</div>
+                            </div>
 
-                    </div>
+                        </div>
           
-                </div>
-                </div>
+                    </div>
+                </div> -->
             
 
  <hr>
- <br><br><br><br><br><br><br> 
- <div class="container">
+ 
+    
+    <div class="container">
  <div class="py-2 bg-secondary">
 
 
@@ -158,12 +157,30 @@ max-width:1300px;
 </div>
 
 <div class="row" style="margin-left: 0px;">
-                <!-- CRC NACIONAL -->
-                <div class="col-sm-6" style="max-width: 19.8%!important;">
-                    <a href='https://sistema.registrocivil.org.br/' target='_blank' title='CRC NACIONAL'>
-                        <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
+
+<!-- CRC NACIONAL -->
+<?php $r = PESQUISA_ALL('cadastroserventia'); foreach ($r as $r ):?>
+                    <?php if ($r->checkboxCivil =='S') {
+                    echo "
+<div class='col-sm-6' style='max-width: 20%!important;'>
+  <a href='https://sistema.registrocivil.org.br/' target='_blank' title='CRC NACIONAL'>
+                                <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/CRC_nacional.jpg'/>
+                                <img style='width: 50%; margin-top: 8%;' src='images/crc_nacional.jpg'/>
+                                
+                            </div>
+
+                     </div>
+      
+                </a>
+            </div>
+
+<!-- INFODIP -->
+<div class='col-sm-6' style='max-width: 20%!important;'>
+  <a href='https://infodipweb.tse.jus.br/infodipweb/home/' target='_blank' title='INFODIP'>
+                                <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
+                                                                  <div class='icon'>
+                                    <img style='width: 50%; margin-top: 8%;' src='images/infodip.jpg'/>
                                     
                                 </div>
 
@@ -172,12 +189,14 @@ max-width:1300px;
                     </a>
                 </div>
 
-                <!-- CFM -->
-                <div class="col-sm-6" style="max-width: 19.8%!important;">
-                <a href="https://portal.cfm.org.br/busca-medicos/" target="_blank" title="Conselho Federal de Medicina">
-                                <div style="cursor:pointer; width: 150px;height: 60px;background:#fff !important" class="info-box bg-brown">
-                                                                  <div class="icon">
-                                    <img style="width: 50%; margin-top: 8%;" src="../images/cfm.jpg"/>
+
+
+<!-- CFM -->
+<div class='col-sm-6' style='max-width: 20%!important;'>
+  <a href='https://portal.cfm.org.br/busca-medicos/' target='_blank' title='Conselho Federal de Medicina'>
+                                <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
+                                                                  <div class='icon'>
+                                    <img style='width: 50%; margin-top: 8%;' src='images/cfm.jpg'/>
                                     
                                 </div>
 
@@ -186,102 +205,61 @@ max-width:1300px;
                     </a>
                 </div>
 
-                <!-- CONSULTAR SELO -->
-                <div class="col-sm-6" style="max-width: 19.8%!important;">
-                    <a href="https://selo.tjma.jus.br/" target="_blank" title='CONSULTAR SELO'>
-                        <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
+          ";
+          }else {
+          echo "";
+          }
+          ?>
+          <?php endforeach ?>
+
+<!-- CONSULTAR SELO (SAUIN) -->
+<div class='col-sm-6' style='max-width: 20%!important;'>
+  <a href="https://selo.tjma.jus.br/" target="_blank" title='CONSULTAR SELO'>
+                                <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/Consultar Selo.jpg'/>
-                                    
-                                </div>
+                                <img style='width: 50%; margin-top: 8%;' src='images/consultar selo.jpg'/>
+                                
+                            </div>
 
-                         </div>
-          
-                     </a>
-                </div>
+                     </div>
+      
+                </a>
 
-                <!-- TJ MA -->
-                <div class="col-sm-6" style="max-width: 19.8%!important;">
-                    <a href="http://www.tjma.jus.br/" target="_blank" title='TJ/MA'>
-                        <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
+</div>
+
+<!-- TRIBUNAL DE JUSTIÇA DO MARANHÃO (TJMA) -->
+<div class='col-sm-6' style='max-width: 20%!important;'>
+  <a href="http://www.tjma.jus.br/" target="_blank" title='TJ/MA'>
+                                <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/TJMA.jpg'/>
-                                    
-                                </div>
+                                <img style='width: 50%; margin-top: 8%;' src='images/TJMA.jpg'/>
+                                
+                            </div>
 
-                         </div>
-          
-                    </a>
-                </div>
+                     </div>
+      
+                </a>
 
-                <!-- WHATSAPP WEB -->
-                <div class="col-sm-6" style="max-width: 19.8%!important;">
-                    <a href="https://web.whatsapp.com/" target="_blank" title='WHATSAPP WEB'>
-                        <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
+</div>
+
+<!-- WHATSAPP WEB -->
+<div class='col-sm-6' style='max-width: 20%!important;'>
+  <a href="https://web.whatsapp.com/" target="_blank" title='WHATSAPP WEB'>
+                                <div style='cursor:pointer; width: 150px;height: 60px;background:#fff !important' class='info-box bg-brown'>
                                 <div class='icon'>
-                                    <img style="width: 50%; margin-top: 8%;" src='../images/whatsapp.jpg'/>
-                                    
-                                </div>
+                                <img style='width: 50%; margin-top: 8%;' src='images/whatsapp.jpg'/>
+                                
+                            </div>
 
-                         </div>
-          
-                    </a>
-                </div>
+                     </div>
+      
+                </a>
 
+</div>
+
+                    </div>
+            </div>
     </div>
-
-
-
-
-        <script type="text/javascript">
-  $(document).ready(function () {
-
-      setTimeout(function(){ 
-        
-        $('#docs').val('');
-      //  window.scrollBy(0, 0);
-        },
-       100);
- });
-            function pdfs(modal) {
-                var modal = modal;
-                if (modal == 'censec') {
-                    var select = document.getElementById('docs');
-                    var id = id;
-
-                    select.onchange = function () {
-                        if (this.value == 1) {
-                            window.location = "exportar-censec-cep.php";
-                        }
-
-                        if (this.value == 2) {
-                            window.location = "exportar-censec-cesdi.php";
-                        }
-
-                        if (this.value == 3) {
-                            window.location = "exportar-censec-rcto.php";
-                        }
-                    }
-                }
-
-
-                //end if variavel modal ---------------------------------------------------------
-
-
-
-            }
-        </script>
-        <!-- OUTROS -->
-        <!-- OUTROS -->
-        <!-- OUTROS -->
-
-    </div>
-
-
-
-    </div>
-
-
 </section>
 
 </body>

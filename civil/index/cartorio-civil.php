@@ -89,7 +89,7 @@ include_once("../assets/header.php");
 
             <hr>
 
-            <div class="row">
+            <!-- <div class="row">
                 <legend>
                     <i class="fa fa-bookmark-o" aria-hidden="true"></i>
                     ÓBITO
@@ -102,7 +102,7 @@ include_once("../assets/header.php");
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
                     <div class="info-box  hovicon effect-9 sub-a" style="background-image: linear-gradient(rgb(69 131 237 / 36%), rgb(60 72 173 / 9%)), url(../images/ico-obito-edit.png)">
                     <div onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-obito.php'?>'" style="cursor:pointer" class="icon">
-                           <!-- <img src="../images/ico-obito.png" width="80%" style="margin-top: -9px; border-radius: 50%"></img> -->
+                            <img src="../images/ico-obito.png" width="80%" style="margin-top: -9px; border-radius: 50%"></img> 
                         </div>
                         <div class="content">
                         </div>
@@ -114,7 +114,7 @@ include_once("../assets/header.php");
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
                     <div class="info-box  hovicon effect-9 sub-a" style="background-image: linear-gradient(rgb(69 131 237 / 36%), rgb(60 72 173 / 9%)), url(../images/ico-pesquisa-obito-edit.png)">
                         <div onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-obito'?>'"  style="cursor:pointer" class="icon">
-                            <!--<img src="../images/ico-pesquisa-obito-edit.png" width="80%" style="margin-top: -9px; border-radius: 50%"></img> -->
+                            <img src="../images/ico-pesquisa-obito-edit.png" width="80%" style="margin-top: -9px; border-radius: 50%"></img> 
                         </div>
                         <div class="content">
                         </div>
@@ -135,7 +135,7 @@ include_once("../assets/header.php");
 
 
 
-            <hr>
+            <hr> -->
 
 
             <!--DESCOMENTAR EM MIGRACAO 01 -->

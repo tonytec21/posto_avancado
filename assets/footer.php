@@ -227,7 +227,7 @@ i.value = v;
 $currentPath = $_SERVER['PHP_SELF']; 
 $pathInfo = pathinfo($currentPath); 
 
-if($pathInfo['dirname'] != '/sistema/notas/index' && $pathInfo['dirname'] != '/sistema/notas/imprimir' && $pathInfo['dirname'] != '/sistema/notas/acervo-antigo'):
+if($pathInfo['dirname'] != '/posto_avancado/notas/index' && $pathInfo['dirname'] != '/posto_avancado/notas/imprimir' && $pathInfo['dirname'] != '/posto_avancado/notas/acervo-antigo'):
 
 
 $dados_lavratura = SEARCH_ID('notas_lavratura',$id,'no');

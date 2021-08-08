@@ -36,7 +36,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
     &times;</span></button>
     Área restrita
     </div>";
-    header("location:http://".$_SERVER['HTTP_HOST']."/sistema/index.php");
+    header("location:http://".$_SERVER['HTTP_HOST']."/posto_avancado/login.php");
 }
 
  ?>

@@ -1,8 +1,13 @@
 <?php
-$username = $_SESSION['username_token'];
-$password = $_SESSION['password_token'];
-$client_id = $_SESSION['client_id_token'];
-$grant_type = $_SESSION['grant_type_token'];
+$urls = PESQUISA_ALL_ID('cadastroserventia',1);
+foreach ($urls as $urls) {
+$_SESSION['urltoken'] = $urls->url_token;
+$_SESSION['urlselodigital'] = $urls->url_selo;
+$username = $urls->username_token;
+$password = $urls->password_token;
+$client_id = $urls->client_id_token;
+$grant_type = $urls->grant_type_token;
+}
 #PARTE 1 OBTENDO O TOKEN DE ACESSO:
 
                 $array = array("username"=>"$username", "password" => "$password", "client_id" => "$client_id", "grant_type" => "$grant_type");

@@ -48,7 +48,9 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../css/themes/all-themes.css" rel="stylesheet" />
-    
+    <!-- data tables -->
+    <link href="../plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.min.css" rel="stylesheet">
 
       <script src="../plugins/ajax/ajax.min.js"></script>
 
@@ -61,6 +63,41 @@
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
    <!-- Bootstrap Core Js -->
 <script src="../plugins/bootstrap/js/bootstrap.js"></script>
+
+<style>
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #979597 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f4f5f7;    /* cor do fundo da barra */
+  }
+
+  *::-webkit-scrollbar-thumb {
+    /* background-color: #133985;    cora da barra */
+    background: linear-gradient(45deg, #a80f1e, #f37783);
+
+    border-radius: 50px;   
+    border: 4px solid #f4f5f7;   /* espessura da barra e cor da borda */
+  }
+  </style>
+
+<style>
+
+.btn{
+  font-size:12px !important;
+}
+
+</style>
+
 </head>
 <?php 
 if (empty($_SESSION['id']) && empty($_SESSION['nome'])) {
@@ -69,7 +106,7 @@ $_SESSION['msg'] = "<div class='alert alert-info' role='alert' id='response'>
     &times;</span></button>
     Área restrita
     </div>";
-    header("location:http://".$_SERVER['HTTP_HOST']."/posto_avancado/index.php");
+    header("location:http://".$_SERVER['HTTP_HOST']."/sistema/index.php");
 }
 
  ?>

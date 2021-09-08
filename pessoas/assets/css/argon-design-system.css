@@ -24980,7 +24980,7 @@ pre>code.highlight {
   top: 0;
   left: 0;
   padding: 0;
-  box-shadow: 0 0 0 3px #fff;
+  box-shadow: 0 0 0 1px #fff;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
@@ -24994,7 +24994,7 @@ pre>code.highlight {
   opacity: 1;
 }
 .hovicon.effect-9.sub-a:hover {
-  box-shadow: inset 0px 33px 25px 0 #8c001a, inset 0 66px 15px 0px #432e94, inset 0 99px 5px 0px #f4f5f7;
+  box-shadow: inset 0px 33px 25px 0 #a80f1e, inset 0 66px 15px 0px #f37783, inset 0 99px 5px 0px #f4f5f7;
   color: #fff;
 }
 .hovicon.effect-9.sub-a:hover i {

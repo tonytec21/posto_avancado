@@ -1,4 +1,4 @@
-              <nav class="navbar navbar-inverse" role="navigation" style="background:#8c001a!important;z-index:100 !important; height: 90px!important">
+              <nav class="navbar navbar-inverse" role="navigation" style="background: linear-gradient(45deg, #a80f1e, #f37783);z-index:100 !important">
                 <div class="container-fluid">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header col-md-2" style="margin-left: 12%;">

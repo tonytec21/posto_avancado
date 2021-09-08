@@ -11,10 +11,14 @@
 // echo"</pre>";
 
 // exit;
+
+
+$verifica_modulos = file_get_contents("../index/modulos-sistema.json");
+$verifica_modulos = json_decode($verifica_modulos, true);
 ?>
 
  <!-- Navbar -->
- <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg  navbar-light headroom  btn-secondary " style="background: #4583ed;z-index:100!important; margin-top: -9px;margin-left: -10px;width: 101.3%;">
+ <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg  navbar-light headroom  btn-secondary " style="background: linear-gradient(45deg, #3394d4, #daf0ff);z-index:100!important; margin-top: -9px;margin-left: -10px;width: 101.3%;">
     <div class="container">
       <a class="navbar-brand mr-lg-5" href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/index.php'?>">
         <img src="../assets/img/brand/logo_1.png" style="height:50px !important" >
@@ -44,10 +48,10 @@
               <i class="ni ni-ui-04 d-lg-none"></i>
               <span class="nav-link-inner--text">MÓDULOS</span>
             </a>
+            
             <div class="dropdown-menu dropdown-menu-xl">
               <div class="dropdown-menu-inner">
-
-                <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="media d-flex align-items-center">
+              <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="media d-flex align-items-center">
                   <div class="icon icon-shape bg-gradient-info rounded-circle text-white">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   </div>
@@ -56,6 +60,7 @@
                     <p class="description d-none d-md-inline-block mb-0">Registro Cívil de Pessoas Naturais</p>
                   </div>
                 </a>
+
 
                 <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index.php'?>" class="media d-flex align-items-center">
                   <div class="icon icon-shape bg-gradient-red rounded-circle text-white">
@@ -70,6 +75,7 @@
 
               </div>
             </div>
+          
           </li>
          
           <li class="nav-item dropdown">
@@ -78,8 +84,8 @@
               <span class="nav-link-inner--text">REGISTRO CIVIL</span>
             </a>
             <div class="dropdown-menu">
-             <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="dropdown-item" >Pagina Inicial</a> 
-            <a style="cursor: pointer;color:black" onclick="$('#oquedeseja').modal();" class="dropdown-item" >Registro Nascimento</a>
+            <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="dropdown-item" >Pagina Inicial</a> 
+            <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a>
             <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Pesquisa Nascimento</a>
             </div>
           </li>

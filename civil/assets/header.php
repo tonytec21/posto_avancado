@@ -28,6 +28,40 @@
 <script src="../assets/plugins/ajax/jquery.min.js"></script>
 <link href="../assets/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
+<style>
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #979597 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f4f5f7;    /* cor do fundo da barra */
+  }
+
+  *::-webkit-scrollbar-thumb {
+    /* background-color: #133985;    cora da barra */
+    background: linear-gradient(45deg, #3394d4, #daf0ff);
+
+    border-radius: 50px;   
+    border: 4px solid #f4f5f7;   /* espessura da barra e cor da borda */
+  }
+  </style>
+
+<style>
+
+.btn{
+  font-size:12px !important;
+}
+
+</style>
+
 </head>
 
 <?php 

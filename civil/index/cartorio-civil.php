@@ -51,10 +51,9 @@ include_once("../assets/header.php");
 
 
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
-                    <div class="info-box  hovicon effect-9 sub-a" style="background-image: linear-gradient(rgb(69 131 237 / 36%), rgb(60 72 173 / 9%)), url(../images/ico-nascimento-edit)">
+                <div class="hovicon effect-9 sub-a" style="background:linear-gradient(45deg, #3394d4, #daf0ff);">
                     <div onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php'?>'" style="cursor:pointer" class="icon">
-                        <!-- <div onclick="$('#oquedeseja').modal();" style="cursor:pointer" class="icon"> -->
-                        <!--    <img src="../images/ico-nascimento.png" width="80%" style="margin-top: -9px; border-radius: 50%"></img> -->
+                    <i class="material-icons" style="font-size: 50px;margin-top: 18px;">child_friendly</i>
                         </div>
                         <div class="content">
                         </div>
@@ -63,10 +62,10 @@ include_once("../assets/header.php");
                 </div>
                 
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
-                    <div class="info-box  hovicon effect-9 sub-a" style="background-image: linear-gradient(rgb(69 131 237 / 36%), rgb(60 72 173 / 9%)), url(../images/ico-pesquisa-nascimento-edit.png)">
-                        <div onclick="window.location.href='../index/pesquisa-nascimento'" style="cursor:pointer" class="icon">
-                       <!--     <img src="../images/ico-pesquisa-nascimento.png" width="80%" style="margin-top: -9px; border-radius: 50%"></img> -->
-                        </div>
+                <div class="hovicon effect-9 sub-a" style="background:linear-gradient(45deg, #3394d4, #daf0ff);">
+                <div onclick="window.location.href='pesquisa-nascimento.php'" style="cursor:pointer" class="icon">
+                        <i class="fa fa-search" style="font-size: 60px; line-height: 103px; position: absolute; color: #04050782" aria-hidden="true"></i>
+                        <i class="material-icons" style="font-size: 50px;margin-top: 18px;">child_friendly</i>                        </div>
                         <div class="content">
                         </div>
                     </div>
@@ -74,16 +73,15 @@ include_once("../assets/header.php");
                 </div>
                 
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
-                    <div class="info-box  hovicon effect-9 sub-a" style="background:linear-gradient(to top, #4583ed 0%, #330867 200%) !important;">
-                        <div onclick="window.location.href='../index/relatorio-pdf-nascimentos'"  style="cursor:pointer" class="icon">
-                             <i class="material-icons" style="color:white!important">child_friendly</i>
+                    <div class="hovicon effect-9 sub-a" style="background:linear-gradient(45deg, #3394d4, #daf0ff);">
+                        <div onclick="window.location.href='relatorio-pdf-nascimentos.php'"  style="cursor:pointer" class="icon">
+                        <i class="fa fa-bar-chart" style="font-size: 50px;margin-left: -4px;margin-top: 18px;" aria-hidden="true"></i>     
                         </div>
                         <div class="content">
                         </div>
                     </div>
-                    <div class="text-center" style="margin-top: -20px;margin-bottom: 10px;">Relatório Nascimento</div>
+                    <div class="text-center" style="margin-top: -20px;margin-bottom: 10px;margin-left: -8px;">Relatório Nascimento</div>
                 </div>
-            </div>
 
 
 

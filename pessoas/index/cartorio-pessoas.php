@@ -56,10 +56,10 @@ include_once("../assets/header.php");
 
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
 
-                    <div class="info-box  hovicon effect-9 sub-a" style="background: linear-gradient(to top, #8c001a 0%, #330867 150%) !important;">
+                <div class="hovicon effect-9 sub-a" style="background: linear-gradient(45deg, #a80f1e, #f37783);">
                         <div onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index/pesquisaPessoas.php'?>'" style="cursor:pointer"
                             class="icon">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <i class="fa fa-search" style="font-size: 50px;  margin-left: -3px; color: #fff"  aria-hidden="true"></i>
                         </div>
                         <div class="content">
                         </div>
@@ -69,10 +69,10 @@ include_once("../assets/header.php");
                 </div>
 
                 <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
-                    <div class="info-box  hovicon effect-9 sub-a" style="background: linear-gradient(to top, #8c001a 0%, #330867 150%) !important;">
+                <div class="hovicon effect-9 sub-a" style="background: linear-gradient(45deg, #a80f1e, #f37783);">
                         <div onclick="window.location.href='<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index/cadastro_pessoas_new.php'?>'" style="cursor:pointer"
                             class="icon">
-                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            <i class="fa fa-user-plus" style="font-size: 50px;  margin-left: -3px; color: #fff"  aria-hidden="true"></i>
                         </div>
                         <div class="content">
                         </div>

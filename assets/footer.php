@@ -210,7 +210,7 @@ i.value = v;
 </script>
 
 <footer class="my-5 pt-5 text-muted text-center text-small">
-          <p class="mb-1">SISTEMA BOOKC V 2.2 &copy; <?=date('Y')?> TODOS OS DIREITOS RESERVADOS</p>
+          <p class="mb-1">SISTEMA BOOKC V 3.0 &copy; <?=date('Y')?> TODOS OS DIREITOS RESERVADOS</p>
           <!-- <ul class="list-inline">
             <li class="list-inline-item"><a href="#">#</a></li>
             <li class="list-inline-item"><a href="#">#</a></li>
@@ -227,7 +227,7 @@ i.value = v;
 $currentPath = $_SERVER['PHP_SELF']; 
 $pathInfo = pathinfo($currentPath); 
 
-if($pathInfo['dirname'] != '/posto_avancado/notas/index' && $pathInfo['dirname'] != '/posto_avancado/notas/imprimir' && $pathInfo['dirname'] != '/posto_avancado/notas/acervo-antigo'):
+if($pathInfo['dirname'] != '/sistema/notas/index' && $pathInfo['dirname'] != '/sistema/notas/imprimir' && $pathInfo['dirname'] != '/sistema/notas/acervo-antigo'):
 
 
 $dados_lavratura = SEARCH_ID('notas_lavratura',$id,'no');

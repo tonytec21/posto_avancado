@@ -24969,7 +24969,7 @@ pre>code.highlight {
   top: 0;
   left: 0;
   padding: 0;
-  box-shadow: 0 0 0 3px #fff;
+  box-shadow: 0 0 0 1px #fff;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
   transition: transform 0.2s, opacity 0.2s;
@@ -24983,10 +24983,10 @@ pre>code.highlight {
   opacity: 0.5;
 }
 .hovicon.effect-9.sub-a:hover {
-  box-shadow: inset 0px 33px 25px 0 #3d4aaf7d, inset 0 66px 15px 0px #4583ed63, inset 0 99px 5px 0px #f4f5f72e
+  box-shadow: inset 0px 33px 25px 0 #3495d4, inset 0 66px 15px 0px #d9efff, inset 0 99px 5px 0px #f4f5f7;
 }
 .hovicon.effect-9.sub-a:hover i {
-  color: #fff;
+  /* color: #fff; */
 }
 /* Effect 9b */
 .hovicon.effect-9.sub-b:hover:after {

@@ -210,12 +210,12 @@ i.value = v;
 </script>
 
 <footer class="my-5 pt-5 text-muted text-center text-small">
-          <p class="mb-1">&copy; 2020 BookC</p>
-          <ul class="list-inline">
+<p class="mb-1">SISTEMA BOOKC &copy; <?=date('Y')?></p>
+          <!-- <ul class="list-inline">
             <li class="list-inline-item"><a href="#">#</a></li>
             <li class="list-inline-item"><a href="#">#</a></li>
             <li class="list-inline-item"><a href="#">#</a></li>
-          </ul>
+          </ul> -->
         </footer>
 </html>
 

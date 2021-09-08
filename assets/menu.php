@@ -18,7 +18,7 @@
 <link href="../plugins/node-waves/waves.css" rel="stylesheet" />
 
  <!-- Navbar -->
- <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg  navbar-light headroom  btn-secondary " style="background: #2e2e2e;z-index:100 !important">
+ <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg  navbar-light headroom  btn-secondary " style="background: linear-gradient(45deg, #121212, #262626, #3d3d3d, #565656);z-index:100 !important">
     <div class="container">
       <a class="navbar-brand mr-lg-5" href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/index.php'?>">
         <img src="../assets/img/brand/logo_1.png" style="height:50px !important" >
@@ -61,9 +61,13 @@
                   </div>
                 </a>
 
+
               </div>
             </div>
           </li>
+
+
+
 
         </ul>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">

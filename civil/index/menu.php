@@ -1,4 +1,10 @@
-              <nav class="navbar navbar-inverse" role="navigation" style="background: #4583ed!important;z-index:100 !important; height: 90px!important">
+              <?php 
+
+              $verifica_modulos = file_get_contents("modulos-sistema.json");
+              $verifica_modulos = json_decode($verifica_modulos, true);
+
+               ?>
+              <nav class="navbar navbar-inverse" role="navigation" style="background: linear-gradient(45deg, #3394d4, #daf0ff);z-index:100 !important; height: 90px!important">
                 <div class="container-fluid">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header col-md-2" style="margin-left: 12%;">
@@ -11,7 +17,8 @@
                       <li class="dropdown">
                         <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 14px; padding-top: 20px;color:white;background: none!important; margin-left: -30%;">MÓDULOS </a>
                         <ul class="dropdown-menu" role="menu" style="margin-top: 0%!important; margin-left: -100%!important; border-radius: 10px;padding: 20px;">
-
+                        
+                          <?php if ($verifica_modulos['checkboxCivil'] =='S'): ?>
                           <li style="width:400px!important; " onclick='window.open("<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>")'
                             onmouseenter ="$(this).css('cursor', 'pointer');$(this).css('background', 'red');" 
                             >
@@ -23,8 +30,9 @@
                                         <p style="margin-left: 13%; font-size: 12px; margin-top: -5%!important;">Registro Cívil de Pessoas Naturais</p>
                                         </div> 
                           </li>
+                          <?php endif ?>
 
-                         <li style="width:400px!important; " onclick='window.open("<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index.php'?>")'
+                          <li style="width:400px!important; " onclick='window.open("<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/pessoas/index.php'?>")'
                             onmouseenter ="$(this).css('cursor', 'pointer');$(this).css('background', 'red');" 
                             >
                                         <div class="icon icon-shape bg-gradient-red rounded-circle text-white col-md-3" >
@@ -45,15 +53,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onmouseenter="$(this).css('background', 'none')" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 14px; padding-top: 20px;color:white;background: none!important;">REGISTRO CIVIL </a>
                         <ul class="dropdown-menu" role="menu" style="margin-top: 0%!important; margin-left: 0%!important; border-radius: 10px;padding: 20px;">
                           
-                          <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="dropdown-item" >Pagina Inicial</a></li>
+                        <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="dropdown-item" >Pagina Inicial</a></li>
+                        <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a></li>
+                        <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Pesquisa Nascimento</a></li>
 
-                          <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a></li>
-
-                          <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Pesquisa Nascimento</a></li>
-
-                          <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-obito.php'?>" class="dropdown-item" >Registro Óbito</a></li>
-
-                          <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-obito'?>" class="dropdown-item" >Pesquisa Óbito</a></li>
                         </ul>
                       </li>
 

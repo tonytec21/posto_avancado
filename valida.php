@@ -32,7 +32,7 @@ if($btnLogin){
     $img_assinatura_titular = $linhas_serventia['imgAssinaturaTitular'];
 	$data_atual = date('Y-m-d', strtotime($linhas_serventia['data_atual']));
 	$status_serventia = $linhas_serventia['status_serventia'];	 
-    $_SESSION['funcao'] = 'TABELIÃO E OFICIAL DE REGISTRO';
+    $_SESSION['funcao'] = 'TABELIÃO E REGISTRADOR';
 		$cns = $linhas_serventia['strCNS'];
 		$cns_bloqueio = '00000';  #INSERIR O NUMERO DO CNS PARA BLOQUEAR
     //  $resultado_usuario = $pdo->prepare("select * FROM usuarios WHERE usuario='$usuario' LIMIT 1");
@@ -103,7 +103,7 @@ break;
 				$_SESSION['msg'] = "<div class='alert alert-danger' role='alert' id='response'>
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>
         &times;</span></button>
-        Login e senha incorreto!
+        Login ou senha incorreto!
         </div>";
 				header("Location: login.php");
         #colocar aqui numa variável de sessão o usuário da tabela funciónários;

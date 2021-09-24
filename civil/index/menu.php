@@ -54,7 +54,7 @@
                         <ul class="dropdown-menu" role="menu" style="margin-top: 0%!important; margin-left: 0%!important; border-radius: 10px;padding: 20px;">
                           
                         <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="dropdown-item" >Pagina Inicial</a></li>
-                        <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a></li>
+                        <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a></li>
                         <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Pesquisa Nascimento</a></li>
 
                         </ul>

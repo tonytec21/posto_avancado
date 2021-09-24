@@ -85,7 +85,7 @@ $verifica_modulos = json_decode($verifica_modulos, true);
             </a>
             <div class="dropdown-menu">
             <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="dropdown-item" >Pagina Inicial</a> 
-            <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a>
+            <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a>
             <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Pesquisa Nascimento</a>
             </div>
           </li>

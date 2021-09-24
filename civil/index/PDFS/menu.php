@@ -53,19 +53,13 @@
 
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" onmouseenter="$(this).css('background', 'none')" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 14px; padding-top: 20px;color:white;background: none!important;">REGISTRO CIVIL </a>
-                        <ul class="dropdown-menu" role="menu" style="margin-top: 0%!important; margin-left: 0%!important; border-radius: 10px;padding: 20px;opacity: .9">
+                        <ul class="dropdown-menu" role="menu" style="margin-top: 0%!important; margin-left: 0%!important; border-radius: 10px;padding: 20px;">
                           
                         <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index.php'?>" class="dropdown-item" >Pagina Inicial</a></li>
-
                         <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-nascimento.php'?>" class="dropdown-item" >Registro Nascimento</a></li>
-
                         <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-nascimento.php'?>" class="dropdown-item" >Pesquisa Nascimento</a></li>
-                        
-                        <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/bd_INSERTS/insert-obito.php'?>" class="dropdown-item" >Registro Óbito</a></li>
 
-                        <li><a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/civil/index/pesquisa-obito'?>" class="dropdown-item" >Pesquisa Óbito</a></li>
-                        
-                      </ul>
+                        </ul>
                       </li>
 
                     </ul>

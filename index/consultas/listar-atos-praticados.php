@@ -127,7 +127,7 @@ $count = $sth->rowCount();
 
                     <th style="width:4%">####</th>
                     <th>ATO</th>
-                    <th>SELO/SELO INICIAL</th>
+                    <th>SELO</th>
                     <th>NOME</th>
                     <th>INFORMAÇÃO</th>
                     <th>ATIVIDADE</th>

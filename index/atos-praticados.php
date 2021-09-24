@@ -124,45 +124,14 @@ max-width:1300px;
                 <div class="row">
                     <div class="col-md-12 offset-md-0 mt-4">
                         <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <label>Resultado por Funcionario:</label>
-                                    <select  class="form-control select2" name="funcionario[]"  multiple="" data-placeholder=" - " style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                    <option><?=$_SESSION['nome'];?></option>
-                            <?php $w = PESQUISA_ALL('funcionario'); foreach($w as $w): ?>
-                            <option><?=$w->strNomeCompleto?></option>
-                            <?php endforeach ?>                               
-                                     </select>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <label>Resultado Por Código de Ato: </label>
-                                    <select class="form-control select2 js-example-basic-single select2-hidden-accessible"  name="codigo_ato[]"  multiple="" data-placeholder=" - " style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
-
-                            <?php $w = PESQUISA_ALL('ato_novo'); foreach($w as $w): ?>
-                            <option value="<?=$w->strCodigoLei;?>"><?=$w->strCodigoLei;?></option>
-                            <?php endforeach ?>   
-   
-                                                    
-                                 </select>
-                                </div>
-                            </div>
-
+                            
                  
 
                             <div class="col-3">
                                 <div class="form-group">
                                 <label>Atribuição:</label>
                                     <select class="form-control select2"   name="atribuicao" data-placeholder=" - "  style="width: 100%;" aria-hidden="true">
-                                        <option value=" ">SELECIONAR</option>
-                                        <option value="13">NOTAS</option>
                                         <option value="14">REGISTRO CIVIL</option>
-                                        <option value="15">RTDPJ</option>
-                                        <option value="16">IMÓVES</option>
-                                        <option value="17">PROTESTO</option>
-
                                     </select>
                                 </div>
                             </div>

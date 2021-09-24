@@ -51,7 +51,7 @@
             <div class="dropdown-menu dropdown-menu-xl">
               <div class="dropdown-menu-inner">
 
-                <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/atos-praticados.php'?>" class="media d-flex align-items-center">
+                <a href="<?='http://'.$_SERVER['HTTP_HOST'].'/posto_avancado/index/atos-praticados.php'?>" class="media d-flex align-items-center">
                   <div class="icon icon-shape bg-gradient-darker rounded-circle text-white">
                   <i class="fa fa-bar-chart" aria-hidden="true"></i>
                   </div>

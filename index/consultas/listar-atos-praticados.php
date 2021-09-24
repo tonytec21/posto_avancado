@@ -10,7 +10,7 @@ $pdo = conectar();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['list'] == 'list'):
     // The request is using the POST method
 
-    $sth = $pdo->query("SELECT * from auditoria where dataHora >= NOW() + INTERVAL -15 DAY AND dataHora <  NOW() + INTERVAL  0 DAY  order by id DESC");
+    $sth = $pdo->query("SELECT * from auditoria where dataHora >= NOW() + INTERVAL -15 DAY AND dataHora <  NOW() + INTERVAL  0 DAY  AND strTipoAto  LIKE '14.b%' order by id DESC");
 
     $sth->execute();
 

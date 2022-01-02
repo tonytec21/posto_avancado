@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 error_reporting(0);
 ini_set('display_errors', 0);
 include('conexao.php');
@@ -115,7 +115,7 @@ $DESC = $pdo->prepare("DESC $tabela");
 $DESC->execute();
 $linhas = $DESC->fetchAll(PDO::FETCH_OBJ);
 foreach ($linhas as $key) {
-echo'$'.$key->Field.' = $matriz->'. $key->Field.';<br>';
+echo'$'.$key->Field.' = $nubente->'. $key->Field.';<br>';
 }
 }
 
@@ -540,11 +540,11 @@ function retorna_info_auditoria($selo){
 
 function retorna_tabela_custas($tabela){
   if ($tabela == 'civil') {
-    return "0120210328";
+    return "0120220101";
   }
 
   elseif($tabela == 'protesto'){
-    return "0320210328";
+    return "0320220101";
   }
 
 }
@@ -552,6 +552,15 @@ function retorna_tabela_custas($tabela){
 
 function verifica_ibge($livro){
  $pdo = conectar();
+
+ if (strlen($livro) < 5) {
+   $mensagem = '<span class="" style="color:red; font-weight: bold;"><i class="material-icons">error</i> indícios de erro...</span> 
+   <script type="text/javascript">swal("ATENÇÃO","HÁ INDÍCIOS DE ERROS DE PREENCHIMENTO NOS REGISTROS DO TRIMESTRE","error");
+   $("#'.$livro.'").css("background","#f78b95");
+   </script>
+   ';
+ }
+
  $livro = $livro = str_pad($livro, 5, "0", STR_PAD_LEFT);
  $busca = $pdo->prepare("SELECT * FROM livronotas where intIdUnico = '$livro'");
  $busca->execute();

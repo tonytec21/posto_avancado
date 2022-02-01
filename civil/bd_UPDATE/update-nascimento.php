@@ -65,24 +65,50 @@ $id = $_GET['id'];
 		unset($_POST['subimit2']);	
 			#var_dump($_POST);
 		 	 #DADOSPAI:
+													#PAI NÃO DECLARADO:
+													if (!isset($_POST['NOMEPAI'])) {
+															UPDATE_CAMPO_ID('registro_nascimento_novo','NOMEPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','CPFPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','RGPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','ORGAOEMISSORPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','NACIONALIDADEPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','NATURALIDADEPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','DATANASCIMENTOPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','SEXOPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','ESTADOCIVILPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','PROFISSAOPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','ENDERECOPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','BAIRROPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','CIDADEPAI',"",$id);
+															UPDATE_CAMPO_ID('registro_nascimento_novo','AVO1PATERNO',"",$id);	
+															UPDATE_CAMPO_ID('registro_nascimento_novo','AVO2PATERNO',"",$id);
+													}		
+					
+
 					if (isset($_POST['NOMEPAI'])) {
 							UPDATE_CAMPO_ID('registro_nascimento_novo','NOMEPAI',addslashes($_POST['NOMEPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','CPFPAI',mb_strtoupper($_POST['CPFPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','RGPAI',mb_strtoupper($_POST['RGPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ORGAOEMISSORPAI',mb_strtoupper($_POST['ORGAOEMISSORPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','NACIONALIDADEPAI',mb_strtoupper($_POST['NACIONALIDADEPAI']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','NATURALIDADEPAI',mb_strtoupper($_POST['NATURALIDADEPAI']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','NATURALIDADEPAI',addslashes($_POST['NATURALIDADEPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','DATANASCIMENTOPAI',mb_strtoupper($_POST['DATANASCIMENTOPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','SEXOPAI',mb_strtoupper($_POST['SEXOPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ESTADOCIVILPAI',mb_strtoupper($_POST['ESTADOCIVILPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','PROFISSAOPAI',mb_strtoupper($_POST['PROFISSAOPAI']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ENDERECOPAI',addslashes($_POST['ENDERECOPAI']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','BAIRROPAI',mb_strtoupper($_POST['BAIRROPAI']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','CIDADEPAI',mb_strtoupper($_POST['CIDADEPAI']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO1PATERNO',mb_strtoupper($_POST['AVO1PATERNO']),$id);	
-							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO2PATERNO',mb_strtoupper($_POST['AVO2PATERNO']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','BAIRROPAI',addslashes($_POST['BAIRROPAI']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','CIDADEPAI',addslashes($_POST['CIDADEPAI']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO1PATERNO',addslashes($_POST['AVO1PATERNO']),$id);	
+							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO2PATERNO',addslashes($_POST['AVO2PATERNO']),$id);
 							if ($_POST['ROGOPAI']!='') {
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ROGOPAI',mb_strtoupper($_POST['ROGOPAI']),$id);
+							}	
+
+							if ($_POST['PROCURADORPAI']!='') {
+							UPDATE_CAMPO_ID('registro_nascimento_novo','PROCURADORPAI',mb_strtoupper($_POST['PROCURADORPAI']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','QUALIFICACAOPROCURADORPAI',mb_strtoupper($_POST['QUALIFICACAOPROCURADORPAI']),$id);
+
 							}	
 					}		
 			 #DADOSMAE:
@@ -91,16 +117,16 @@ $id = $_GET['id'];
 							UPDATE_CAMPO_ID('registro_nascimento_novo','RGMAE',mb_strtoupper($_POST['RGMAE']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ORGAOEMISSORMAE',mb_strtoupper($_POST['ORGAOEMISSORMAE']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','NACIONALIDADEMAE',mb_strtoupper($_POST['NACIONALIDADEMAE']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','NATURALIDADEMAE',mb_strtoupper($_POST['NATURALIDADEMAE']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','NATURALIDADEMAE',addslashes($_POST['NATURALIDADEMAE']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','DATANASCIMENTOMAE',mb_strtoupper($_POST['DATANASCIMENTOMAE']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','SEXOMAE',mb_strtoupper($_POST['SEXOMAE']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ESTADOCIVILMAE',mb_strtoupper($_POST['ESTADOCIVILMAE']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','PROFISSAOMAE',mb_strtoupper($_POST['PROFISSAOMAE']),$id);
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ENDERECOMAE',addslashes($_POST['ENDERECOMAE']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','BAIRROMAE',mb_strtoupper($_POST['BAIRROMAE']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','CIDADEMAE',mb_strtoupper($_POST['CIDADEMAE']),$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO1MATERNO',mb_strtoupper($_POST['AVO1MATERNO']),$id);	
-							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO2MATERNO',mb_strtoupper($_POST['AVO2MATERNO']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','BAIRROMAE',addslashes($_POST['BAIRROMAE']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','CIDADEMAE',addslashes($_POST['CIDADEMAE']),$id);
+							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO1MATERNO',addslashes($_POST['AVO1MATERNO']),$id);	
+							UPDATE_CAMPO_ID('registro_nascimento_novo','AVO2MATERNO',addslashes($_POST['AVO2MATERNO']),$id);
 							if ($_POST['ROGOMAE']!='') {
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ROGOMAE',mb_strtoupper($_POST['ROGOMAE']),$id);
 							}
@@ -157,11 +183,13 @@ $id = $_GET['id'];
 
 							if (isset($_POST['menorPAI']) && $_POST['menorPAI'] == 'S') {
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ROGOPAISOCIO','PAIDEMENOR',$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','NOMEPAISOCIO',mb_strtoupper($_POST['RESPONSAVELPAI']),$id);
+							$resppai =  $_POST['RESPONSAVELPAI'].','.$_POST['PARENTESCORESPONSAVELPAI'];
+							UPDATE_CAMPO_ID('registro_nascimento_novo','NOMEPAISOCIO',mb_strtoupper($resppai),$id);
 							}
 							if (isset($_POST['menorMAE']) && $_POST['menorMAE'] == 'S') {
 							UPDATE_CAMPO_ID('registro_nascimento_novo','ROGOMAESOCIO','MAEDEMENOR',$id);
-							UPDATE_CAMPO_ID('registro_nascimento_novo','NOMEMAESOCIO',mb_strtoupper($_POST['RESPONSAVELMAE']),$id);
+							$respmae = $_POST['RESPONSAVELMAE'].','.$_POST['PARENTESCORESPONSAVELMAE'];
+							UPDATE_CAMPO_ID('registro_nascimento_novo','NOMEMAESOCIO',mb_strtoupper($respmae),$id);
 							}
 
 							
@@ -207,15 +235,27 @@ $id = $_GET['id'];
 					header('Location: ' . $_SERVER['HTTP_REFERER']);					
 	}
 #SUBMIT4 =====================================================================================================================
-	if (isset($_POST['subimit4'])) {
-		unset($_POST['subimit4']);
-			#var_dump($_POST);
-				header('Location: ' . $_SERVER['HTTP_REFERER']);
+	if (isset($_POST['submit4'])) {
+		#VERIFICANDO SE JA EXISTE:
+		$inteiro_teor = $_POST['inteiro_teor'];
+		$observacoes_registro = $_POST['observacoes_registro'];
+		$obs_visivel_certidao = $_POST['obs_visivel_certidao'];	
+		$jaexiste = pesquisa_existe_tabela("info_registros_civil","id_registro_nascimento", "$id");
 
+		if ($jaexiste == true) {
+		$up_registro = $pdo->prepare("UPDATE info_registros_civil set inteiro_teor ='$inteiro_teor', observacoes_registro = '$observacoes_registro', obs_visivel_certidao = '$obs_visivel_certidao' where id_registro_nascimento = '$id'");
+
+		$up_registro->execute();
+		}
+
+		else{
+			$in_registro = $pdo->prepare("INSERT INTO `info_registros_civil` (`ID`, `id_registro_nascimento`, `inteiro_teor`, `observacoes_registro`, `obs_visivel_certidao`, `id_registro_casamento`, `id_registro_obito`, `id_registro_especial`, `id_registro_emancipacao`, `id_registro_ausencia`, `id_registro_interdicao`) VALUES (NULL, '$id', '$inteiro_teor', '$observacoes_registro', '$obs_visivel_certidao', NULL, NULL, NULL, NULL, NULL, NULL);");
+			$in_registro->execute();
+		}
+		header('Location: ' . $_SERVER['HTTP_REFERER']);	
 	}
 #SUBIMITSELO =================================================================================================================
 if (isset($_POST['subimitselo'])) {
-
 			if (!isset($_POST['ACERVOFISICO'])) {
 				$_POST['ACERVOFISICO'] = '';
 			}
@@ -257,11 +297,15 @@ if (isset($_POST['subimitselo'])) {
 
 
 #PROXIMO PASSO ENVIANDO A SOLICITAÇÃO DO SELO: ===============================================================================================
-            
+            function tiraaspas($string){
+            	$tirar = array("'", '"');
+            	return str_replace($tirar, "", $string);
+            }
+            $tabela_custas = retorna_tabela_custas('civil');
 
 			$pesquisanomeparte = PESQUISA_ALL_ID('registro_nascimento_novo',$id);
 			foreach ($pesquisanomeparte as $p) {
-			$nomeparte = $p->NOMENASCIDO;
+			$nomeparte = tiraaspas($p->NOMENASCIDO);
 			$pai = $p->NOMEPAI;
 			$mae = $p->NOMEMAE;
 			$docpai = $p->CPFPAI;
@@ -292,7 +336,7 @@ if (isset($_POST['subimitselo'])) {
                             "codigoTipoAtoRegistro":"'.$ato_praticado.'",
                             "escrevente":"'.$escrevente.'",
                             "nomeParte":"'.$nomeparte.'",
-                            "versaoTabelaDeCustas":"'.$_SESSION['tabelavigente'].'",
+                            "versaoTabelaDeCustas":"'.$tabela_custas.'",
                             "nomesPartes": {
                             "nomesPartes":"X",
                             "parteAto":[
@@ -309,7 +353,7 @@ if (isset($_POST['subimitselo'])) {
                             "folha": "'.$FOLHA.'",
                             "livro": "A'.$LIVRO.'",
                             "termo": "'.$TERMO.'",
-                            "versaoTabelaDeCustas":"'.$_SESSION['tabelavigente'].'"
+                            "versaoTabelaDeCustas":"'.$tabela_custas.'"
                             },
                             "papelMoeda":{
                             	"codigo":"'.$NUMEROPAPEL.'",
@@ -324,7 +368,7 @@ if (isset($_POST['subimitselo'])) {
                             "codigoTipoAtoRegistro":"'.$ato_praticado.'",
                             "escrevente":"'.$escrevente.'",
                             "nomeParte":"'.$nomeparte.'",
-                            "versaoTabelaDeCustas":"'.$_SESSION['tabelavigente'].'",
+                            "versaoTabelaDeCustas":"'.$tabela_custas.'",
                             "nomesPartes": {
                             "nomesPartes":"X",
                             "parteAto":[
@@ -339,7 +383,7 @@ if (isset($_POST['subimitselo'])) {
                             "folha": "'.$FOLHA.'",
                             "livro": "A'.$LIVRO.'",
                             "termo": "'.$TERMO.'",
-                            "versaoTabelaDeCustas":"'.$_SESSION['tabelavigente'].'"
+                            "versaoTabelaDeCustas":"'.$tabela_custas.'"
                             },
                             "papelMoeda":{
                             	"codigo":"'.$NUMEROPAPEL.'",
@@ -360,7 +404,7 @@ if (isset($_POST['subimitselo'])) {
                     $handler = curl_init($_SESSION['urlselodigital'].'civil/nascimento');
 
                     curl_setopt_array($handler, [
-
+                    CURLOPT_SSLVERSION => 5, 	
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => "",
                     CURLOPT_MAXREDIRS => 10,
@@ -483,5 +527,4 @@ else{
 
 	
 }
-
  ?>

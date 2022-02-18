@@ -1589,7 +1589,10 @@ include('nascimento-bd.php');
                             <div class="col-md-8">
                             <select name="ATONASCIMENTO" id="ATONASCIMENTO"  class="col-sm-5 form-control"  required>
 
-
+                                 <option value=""> Selecione </option>
+                                <option value="14.a"> 14.a - Registro de nascimento, bem como pela primeira
+                                certidão respectiva. Isento...
+                                </option>
                                 <option value="14.b">14.b - Registro de nascimento realizado pelas Centrais ou
                                 Postos de Registro mantidos pelo poder público...
                                 </option>

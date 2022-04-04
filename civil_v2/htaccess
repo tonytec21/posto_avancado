@@ -1,0 +1,33 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+#ErrorDocument 403 /specific_page.html
+#Order Allow,Deny
+#Allow from 10.0.0.103
+
+#php_value upload_max_filesize 10M
+#php_value post_max_size 10M
+php_value max_execution_time 200
+php_value max_input_time 200
+
+php_value memory_limit 8192M
+php_value post_max_size 8192M
+php_value upload_max_filesize 8192M
+php_value max_execution_time 0
+php_value memory_limit -1
+
+#ErrorDocument 403 /maintenance.html
+#Order Allow,Deny
+#Allow from 26.181.109.126
+
+
+#para "camuflar pasta fk para pasta original
+RewriteEngine on
+RewriteRule ^sistema/(.*) sistema/$1
+
+#RewriteRule ^/sistema/(.*)?$ /digitalverso/$1 [R]
+#RewriteRule ^/digitalverso/(.*)?$ /sistema/$1 [NC]
+
+

@@ -808,7 +808,7 @@ if ($remover!='estadocivil') {
 
 // 9. ENDEREÇO
 
-          if (!empty($b->strLogradouro) && !empty($b->strBairro)  && $b->strLogradouro!='' && $b->strBairro!='') {
+          if (!empty($b->strLogradouro)  && $b->strLogradouro!='') {
            if ($b->setSexo == 'M') {
               $qualificacao .= ", residente e domiciliado a ";
             } 
@@ -927,13 +927,13 @@ if ($remover!='estadocivil') {
 
 
 
-          $qualificacao .= " (".date('d/m/Y', strtotime($b->dataNascimento)).')';
+          $qualificacao .= ", (".date('d/m/Y', strtotime($b->dataNascimento)).')';
         }
 
 // 14. IDADE
 
         if (!empty($b->dataNascimento) && $b->dataNascimento!='') {
-          $qualificacao .= ", com ".idade_civil($b->dataNascimento, $dataRegistro). " anos de idade.";
+          $qualificacao .= ", com ".idade_civil($b->dataNascimento, $dataRegistro). " anos de idade";
         }
 
 
@@ -1045,7 +1045,7 @@ if ($remover!='estadocivil') {
 
 // 9. ENDEREÇO
 
-         if (!empty($b->strLogradouro) && !empty($b->strBairro)  && $b->strLogradouro!='' && $b->strBairro!='') {
+         if (!empty($b->strLogradouro) && $b->strLogradouro!='') {
            if ($b->setSexo == 'M') {
               $qualificacao .= ", residente e domiciliado a ";
             } 
@@ -1163,7 +1163,7 @@ if ($remover!='estadocivil') {
 
 
 
-          $qualificacao .= " (".date('d/m/Y', strtotime($b->dataNascimento)).')';
+          $qualificacao .= ", (".date('d/m/Y', strtotime($b->dataNascimento)).')';
         }
 
 // 14. IDADE
@@ -1423,7 +1423,7 @@ function escrevedataextenso($data){
 
 
 
-          echo " (".date('d/m/Y', strtotime($data)).')';
+          echo ", (".date('d/m/Y', strtotime($data)).')';
         }
 
         #ESCREVE A DATA POR EXTENSO SEM A DATA COM NUMERAL
@@ -1478,7 +1478,7 @@ function escrevedataextenso1($data){
 
           $dataAno = $novaDataRegistro[0];
           if (substr($dataAno, -2) == '11') {
-            echo GExtenso::numero($dataAno)." onze";}
+            echo GExtenso::numero($dataAno);}
           elseif (substr($dataAno, -1) == '1') {
             echo GExtenso::numero($dataAno)." um";}
           else {
@@ -1881,7 +1881,7 @@ function montaqualificacaonubentescertidao_id($id, $dataRegistro,$remover){
 
 
 
-          $qualificacao .= " (".date('d/m/Y', strtotime($b->dataNascimento)).')';
+          $qualificacao .= ", (".date('d/m/Y', strtotime($b->dataNascimento)).')';
         }
 
       }  
@@ -2084,7 +2084,7 @@ function montaqualificacaocivil($dados, $tipoparte,$remover, $dataRegistro){
 
 // 9. ENDEREÇO
 
-      if (!empty($dados['ENDERECO'.$tipoparte]) && !empty($dados['BAIRRO'.$tipoparte])  && $dados['ENDERECO'.$tipoparte]!='' && $dados['BAIRRO'.$tipoparte]!='') {
+      if (!empty($dados['ENDERECO'.$tipoparte]) && $dados['ENDERECO'.$tipoparte]!='') {
         if ($dados['SEXO'.$tipoparte] == 'M') {
           $qualificacao .= ", residente e domiciliado a ";
         } 
@@ -2213,7 +2213,7 @@ function montaqualificacaocivil($dados, $tipoparte,$remover, $dataRegistro){
 // 13. IDADE
 
       if (!empty($dados['DATANASCIMENTO'.$tipoparte]) && $dados['DATANASCIMENTO'.$tipoparte]!='') {
-        $qualificacao .= ", com ".idade_civil($dados['DATANASCIMENTO'.$tipoparte], $dataRegistro). " anos de idade.";
+        $qualificacao .= ", com ".idade_civil($dados['DATANASCIMENTO'.$tipoparte], $dataRegistro). " anos de idade";
       }
       else{$qualificacao .= '<span style="display:none">,</span>';}
 
@@ -2405,7 +2405,7 @@ function montaqualificacaonubentescertidao_civil($dados, $dataRegistro,$remover,
 
 
 
-        $qualificacao .= " (".date('d/m/Y', strtotime($dados['DATANASCIMENTO'.$tipoparte])).')';
+        $qualificacao .= ", (".date('d/m/Y', strtotime($dados['DATANASCIMENTO'.$tipoparte])).')';
       }
 
       

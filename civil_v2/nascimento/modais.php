@@ -19,15 +19,15 @@
         </div>
         <div class="col-lg-6">
           <label for="country">LIVRO:</label>
-          <input id="LIVRONASCIMENTO" name="LIVRONASCIMENTO" type="number"  class="form-control valid" aria-invalid="false" required="true">
+          <input id="LIVRONASCIMENTO" name="LIVRONASCIMENTO" type="number"  class="form-control valid" aria-invalid="false" required="true" readonly>
         </div>
         <div class="col-lg-6">
           <label for="country">FOLHA:</label>
-          <input id="FOLHANASCIMENTO" name="FOLHANASCIMENTO" type="number"  class="form-control valid" aria-invalid="false" required="true">
+          <input id="FOLHANASCIMENTO" name="FOLHANASCIMENTO" type="number"  class="form-control valid" aria-invalid="false" required="true" readonly>
         </div>
         <div class="col-lg-6">
           <label for="country">TERMO:</label>
-          <input id="TERMONASCIMENTO" name="TERMONASCIMENTO" type="number"  class="form-control valid" aria-invalid="false" required="true">
+          <input id="TERMONASCIMENTO" name="TERMONASCIMENTO" type="number"  class="form-control valid" aria-invalid="false" required="true" readonly>
         </div>
         <div class="col-lg-12">
           <label for="country">MATRICULA:</label>
@@ -95,7 +95,7 @@
             <option value="14.b">14.b - Registro de nascimento realizado pelas Centrais ou
               Postos de Registro mantidos pelo poder público...
             </option>
-            <!-- <option value="14.3.3">14.3.3 - Retificação, restauração ou cancelamento de registro, qualquer que seja a causa e alteração de patronímico familiar por determinação judicial, excluída a certidão. 
+            <option value="14.3.3">14.3.3 - Retificação, restauração ou cancelamento de registro, qualquer que seja a causa e alteração de patronímico familiar por determinação judicial, excluída a certidão. 
 
             </option>
 
@@ -105,7 +105,7 @@
 
             <option value="14.11">14.11 Pelos procedimentos administrativos de reconhecimento de paternidade ou maternidade...</option>
             <option value="14.4.2">14.4.2 - Quando houver necessidade de transposição...</option>
-            <option value="14.13">14.13 - Procedimento administrativo para o registro tardio - isento - para fins de compensação os emolumentos serão os do item 14.5.1. </option> -->
+            <option value="14.13">14.13 - Procedimento administrativo para o registro tardio - isento - para fins de compensação os emolumentos serão os do item 14.5.1. </option>
 
           </datalist>
           <div class="col-lg-6"><label for="country">QUANTIDADE</label><input class="form-control" type="number" name="QUANTIDADE" id="QUANTIDADE" readonly="" value="1"></div>

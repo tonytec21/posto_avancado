@@ -18,7 +18,7 @@ if($btnLogin){
 		//Pesquisar o usuário no BD
     $pdo = conectar();
 
-
+    $pdo_logs = conexao_logs();
 
 
     # BUSCANDO DADOS DA SERVENTIA PARA DIFERENCIAR LOGIN AUTOMATICAMENTE:
@@ -28,7 +28,7 @@ if($btnLogin){
 
     $login_titular = $linhas_serventia['strCpfTitular'];
     $senha_titular = $linhas_serventia['strSenhaTitular'];
-    $nome_titular = strtoupper($linhas_serventia['strTituloServentia']);
+    $nome_titular = mb_convert_case($linhas_serventia['strTituloServentia'], MB_CASE_UPPER, "UTF-8");
     $img_assinatura_titular = $linhas_serventia['imgAssinaturaTitular'];
 	$data_atual = date('Y-m-d', strtotime($linhas_serventia['data_atual']));
 	$status_serventia = $linhas_serventia['status_serventia'];	 
@@ -54,7 +54,7 @@ include_once('check.php');
 			$update = $pdo->prepare("update cadastroserventia set status_serventia = '0' where strCNS = '$cns'"); 
 			if ($update->execute()) {echo 'OK';}else {echo 'Erro data_corrente';}
 			header("Location: stop.php");
-			break;
+			return false; exit;
 			}	
 
 		}
@@ -69,7 +69,7 @@ include_once('check.php');
 
 if ($status_serventia == 0){
 header("Location: stop.php");
-break;
+return false; exit;
 }
 	
 
@@ -82,28 +82,86 @@ break;
 
 			if($row_usuario['strSenha'] == $senha && $row_usuario['strUsuario'] == $usuario){
 		    $_SESSION['id'] = $row_usuario['id'];
-        $_SESSION['nome'] = strtoupper($row_usuario['strNomeCompleto']);
+        $_SESSION['nome'] =  mb_convert_case($row_usuario['strNomeCompleto'], MB_CASE_UPPER, "UTF-8");
         $_SESSION['email'] = $row_usuario['strEmail'];
         $_SESSION['assinatura'] = $row_usuario['imgAssinatura'];
         $_SESSION['permissao'] = $row_usuario['strPermissaoAssinar'];
         $_SESSION['funcao'] = $row_usuario['strCargo'];
-        if ($_SESSION['funcao'] == "GERENCIA") {
-        $_SESSION['logadoAdm'] = 'S';
-        }
+        
+       
+
+		#NÍVEIS DE ACESSO ======================================================================================
+		/*
+        if ($_SESSION['funcao'] == "GERENCIA") {$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "ESCREVENTE SUBSTITUTO"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "ESCREVENTE SUBSTITUTA"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "GERENTE"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃO SUBSTITUTO"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃ SUBSTITUTA"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "OFICIAL e REGISTRADOR"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "OFICIAL e REGISTRADORA"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃO e REGISTRADOR"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃ e REGISTRADORA"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃO e REGISTRADOR INTERINO"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃ e REGISTRADORA INTERINA"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃO e REGISTRADOR SUBSTITUTO"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "TABELIÃ e REGISTRADORA SUBSTITUTA"){$_SESSION['logadoAdm'] = 'S';}	
+		elseif($_SESSION['funcao'] == "OFICIAL e REGISTRADOR SUBSTITUTO"){$_SESSION['logadoAdm'] = 'S';}
+		elseif($_SESSION['funcao'] == "OFICIAL e REGISTRADORA SUBSTITUTA"){$_SESSION['logadoAdm'] = 'S';}	
+		*/
+
+				$array = array("GERENCIA","ESCREVENTE SUBSTITUTO","ESCREVENTE SUBSTITUTA","GERENTE","TABELIÃO SUBSTITUTO","TABELIÃ SUBSTITUTA","OFICIAL e REGISTRADOR","OFICIAL e REGISTRADORA","TABELIÃO e REGISTRADOR","TABELIÃ e REGISTRADORA","TABELIÃO e REGISTRADOR INTERINO","TABELIÃ e REGISTRADORA INTERINA","TABELIÃO e REGISTRADOR SUBSTITUTO","TABELIÃ e REGISTRADORA SUBSTITUTA","OFICIAL e REGISTRADOR SUBSTITUTO","OFICIAL e REGISTRADORA SUBSTITUTA");
+
+				if (in_array($_SESSION['funcao'], $array, true)) {
+					echo $_SESSION['logadoAdm'] = 'S';
+				}
+
+		#======================================================================================================
+
+        session_regenerate_id(TRUE);  # GERANDO UM NOVO ID DE SESSÃO
+
+        	//INSERIR DADOS AUDITORIA
+		$session_id=  session_id();	
+		$user_login= $_SESSION['nome'] ;
+		$id_login=  $_SESSION['id'];
+
+		$host= gethostname();
+		$ip = gethostbyname($host);
+    $action = $_SERVER['REMOTE_ADDR'];
+	
+		$res_c = $pdo_logs->prepare("INSERT into logs (session_id, user_login, id_login, ip, host, action) values (:session_id, :user_login, :id_login, :ip, :host, :action)");
+	
+		$res_c->bindValue(":session_id", $session_id);
+		$res_c->bindValue(":user_login", $user_login);
+		$res_c->bindValue(":id_login", $id_login);
+		$res_c->bindValue(":ip", $ip);
+		$res_c->bindValue(":host", $host);
+		$res_c->bindValue(":action", $action);
+
+
+		$executeQuery = $res_c->execute();
+	
+		if ($executeQuery == false) {
+			print_r($res_c->errorInfo());
+			die ('Error executing the query to login.');
+		}
+
+
 				if ($cns == $cns_bloqueio) {
 						header("Location: stop.php");
 				}else {
 					// code...
-
 				header("Location: index.php");
 				}
+
+
 			}
 
       else{
 				$_SESSION['msg'] = "<div class='alert alert-danger' role='alert' id='response'>
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>
         &times;</span></button>
-        Login ou senha incorreto!
+        Login e senha incorreto!
         </div>";
 				header("Location: login.php");
         #colocar aqui numa variável de sessão o usuário da tabela funciónários;
@@ -116,14 +174,50 @@ break;
         $_SESSION['assinatura'] = $img_assinatura_titular;
         $_SESSION['permissao'] = 'S';
         $_SESSION['logadoAdm'] = 'S';
+
+
+        session_regenerate_id(TRUE);  # GERANDO UM NOVO ID DE SESSÃO
+
+              //INSERIR DADOS AUDITORIA
+        $session_id=  session_id();	
+        $user_login= $_SESSION['nome'] ;
+        $id_login=  $_SESSION['id'];
+
+        $host= gethostname();
+        $ip = gethostbyname($host);
+        $action = $_SERVER['REMOTE_ADDR'];
+
+
+        $res_c = $pdo_logs->prepare("INSERT into logs (session_id, user_login, id_login, ip, host, action) values (:session_id, :user_login, :id_login, :ip, :host, :action)");
+
+        $res_c->bindValue(":session_id", $session_id);
+        $res_c->bindValue(":user_login", $user_login);
+        $res_c->bindValue(":id_login", $id_login);
+        $res_c->bindValue(":ip", $ip);
+        $res_c->bindValue(":host", $host);
+        $res_c->bindValue(":action", $action);
+
+        $executeQuery = $res_c->execute();
+
+        if ($executeQuery == false) {
+          print_r($res_c->errorInfo());
+          die ('Error executing the query to login.');
+        }
+
+
+
 				if ($cns == $cns_bloqueio) {
 						header("Location: stop.php");
 				}else {
 					// code...
-
+					$_SESSION['nome'] = mb_convert_case($_SESSION['nome'], MB_CASE_UPPER, "UTF-8");	
 					header("Location: index.php");
 
 				}
+
+
+
+
       }
 
   else{
